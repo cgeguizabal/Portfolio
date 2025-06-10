@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+
+const nextConfig = {
+  devIndicators: false,
+  sassOptions: {
+    additionalData: `@use "styles/globals" as *;`,
+    includePaths: ["./"],
+  },
+};
 
 export default nextConfig;
