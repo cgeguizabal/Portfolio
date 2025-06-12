@@ -1,1 +1,34 @@
-@use "variables" as *;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  background-image: url("../assets/bg-desktop-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-rows:
+    [full-start]minmax(4rem, 1fr)
+    [center-start] repeat(4, [row-start] minmax(min-content, 20rem) [row-end])
+    [center-end] minmax(4rem, 1fr)
+    [full-end];
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end])
+    [center-end] minmax(6rem, 1fr) [full-end];
+  gap: 2rem;
+}

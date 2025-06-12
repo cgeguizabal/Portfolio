@@ -1,3 +1,6 @@
+// app/layout.jsx
+import "../styles/globals.scss";
+
 export const metadata = {
   title: "Guillermo Eguizabal - Portfolio",
   keywords:
@@ -6,14 +9,12 @@ export const metadata = {
     "Get to know Guillermo Eguizabal, a web developer with a passion for creating innovative solutions.",
 };
 
-const MainLayout = ({ children }) => {
+export default function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="en">
       <body>
-        <main>{children}</main>
+        <main className="container">{children}</main>
       </body>
     </html>
   );
-};
-
-export default MainLayout;
+}

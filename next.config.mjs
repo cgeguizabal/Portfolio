@@ -3,8 +3,8 @@
 const nextConfig = {
   devIndicators: false,
   sassOptions: {
-    additionalData: `@use "styles/globals" as *;`,
-    includePaths: ["./"],
+    additionalData: `@use "styles/variables" as *;`,
+    includePaths: ["./styles"],
   },
 };
 
