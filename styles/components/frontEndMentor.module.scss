@@ -1,5 +1,4 @@
 .container {
-  // background-color: wheat;
   border-radius: 2rem;
   grid-column: col-start 1 / col-end 2;
   grid-row: row-start 4 / row-end 4;
@@ -31,4 +30,10 @@
 
   /* Transition for smooth hover */
   transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+
+  padding: 2rem;
+}
+
+.content {
+  color: $light-gray;
 }

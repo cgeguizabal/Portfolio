@@ -1,6 +1,15 @@
 "use client";
 import frontEndMentor from "@/styles/components/frontEndMentor.module.scss";
 import { motion } from "motion/react";
+import { SiFrontendmentor } from "react-icons/si";
+
+import { Dosis } from "next/font/google";
+
+const dosis = Dosis({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  display: "swap",
+});
 
 function FrontendMentorSection() {
   return (
@@ -17,7 +26,15 @@ function FrontendMentorSection() {
         x: { duration: 0.7, ease: "easeInOut" },
         opacity: { duration: 1.2, ease: "easeOut" },
       }}
-    ></motion.div>
+    >
+      <div className={`${frontEndMentor.content} ${dosis.className}`}>
+        <div>
+          <span>See My</span>
+          <span>Frontend Builds </span>
+          <span>on</span>
+        </div>
+      </div>
+    </motion.div>
   );
 }
 
