@@ -1,7 +1,7 @@
 "use client";
 import frontEndMentor from "@/styles/components/frontEndMentor.module.scss";
 import { motion } from "framer-motion";
-import { SiFrontendmentor } from "react-icons/si";
+
 import { Dosis } from "next/font/google";
 
 const dosis = Dosis({
@@ -27,6 +27,7 @@ function FrontendMentorSection() {
         opacity: { duration: 1.2, ease: "easeOut" },
       }}
     >
+      {/* whole content container */}
       <div className={`${frontEndMentor.content} ${dosis.className}`}>
         <div className={frontEndMentor.content_text}>
           <motion.span
@@ -35,7 +36,7 @@ function FrontendMentorSection() {
             viewport={{ once: true }}
             transition={{
               delay: containerDelay + containerDuration,
-              y: { duration: 2.6, ease: "easeInOut" },
+              y: { duration: 1.6, ease: "easeInOut" },
               opacity: { duration: 2.6, ease: "easeOut" },
             }}
             className={frontEndMentor.content_text_1}

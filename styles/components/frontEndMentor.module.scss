@@ -4,7 +4,7 @@
   grid-row: row-start 4 / row-end 4;
   height: 25rem;
 
-  /* Gradient - Almost transparent */
+  /* Gradient */
   background: rgba(20, 20, 20, 0.05);
   background: linear-gradient(
     135deg,
@@ -17,7 +17,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1); // Ultra-subtle inner glow
 
-  /* Hover State - Slight intensification */
+  /* Hover State */
   &:hover {
     background: linear-gradient(
       135deg,
@@ -27,8 +27,6 @@
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
       inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
   }
-
-  /* Transition for smooth hover */
   transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
 
   padding: 2rem;

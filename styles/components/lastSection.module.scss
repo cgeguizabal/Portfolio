@@ -1,11 +1,10 @@
 .container {
-  // background-color: rgb(207, 131, 148);
   border-radius: 2rem;
   grid-column: col-start 7 / col-end 8;
   grid-row: row-start 4 / row-end 4;
   height: 25rem;
 
-  /* Gradient - Almost transparent */
+  /* Gradient */
   background: rgba(20, 20, 20, 0.05);
   background: linear-gradient(
     135deg,
@@ -18,7 +17,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1); // Ultra-subtle inner glow
 
-  /* Hover State - Slight intensification */
+  /* Hover State */
   &:hover {
     background: linear-gradient(
       135deg,
@@ -29,6 +28,95 @@
       inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
   }
 
-  /* Transition for smooth hover */
   transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -42%;
+    right: -38%;
+    transform: translate(-50%, -50%);
+    width: 175px;
+    height: 175px;
+    background-image: url("/images/githubLogo-t.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    z-index: 0;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: -35%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    background-image: url("/images/element-transparent-circle.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.7;
+
+    z-index: 0;
+  }
+}
+
+.content {
+  color: $light-gray;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+  &_text {
+    display: flex;
+    flex-direction: column;
+    &_1 {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+    &_2 {
+      font-size: 3.6rem;
+      font-weight: 700;
+
+      color: $soft-red;
+    }
+    &_3 {
+      font-size: 2.4rem;
+      font-weight: 400;
+    }
+  }
+}
+
+.button {
+  color: $light-gray;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: $graphite;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  align-self: flex-start;
+  margin-bottom: 1.5rem;
+
+  transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+  &:hover {
+    cursor: pointer;
+    background-color: $soft-red;
+    color: white;
+    border: none;
+    transform: scale(1.05);
+  }
 }
