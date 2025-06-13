@@ -32,8 +32,77 @@
   transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
 
   padding: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -30%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background-image: url("/images/frontendMentor-gray-t-2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    z-index: 0;
+  }
 }
 
 .content {
   color: $light-gray;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+  &_text {
+    display: flex;
+    flex-direction: column;
+    &_1 {
+      font-size: 3rem;
+      font-weight: 500;
+    }
+    &_2 {
+      font-size: 3.6rem;
+      font-weight: 700;
+      margin-left: 2rem;
+      color: $soft-red;
+    }
+    &_3 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      align-self: flex-end;
+      margin-right: 1.3rem;
+    }
+  }
+}
+
+.button {
+  color: $light-gray;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: $graphite;
+  border: none;
+  text-decoration: none;
+  position: relative;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  align-self: flex-end;
+  margin-bottom: 1.5rem;
+  margin-right: 1.3rem;
+  transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+  &:hover {
+    cursor: pointer;
+    background-color: $soft-red;
+    color: white;
+    border: none;
+    transform: scale(1.05);
+  }
 }
