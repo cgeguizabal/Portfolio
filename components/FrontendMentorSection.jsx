@@ -1,6 +1,6 @@
 "use client";
 import frontEndMentor from "@/styles/components/frontEndMentor.module.scss";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 import { Dosis } from "next/font/google";
 

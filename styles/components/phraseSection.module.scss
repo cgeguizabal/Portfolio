@@ -1,10 +1,9 @@
 .container {
-  // background-color: rgb(161, 197, 233);
   border-radius: 2rem;
   grid-column: col-start 3 / col-end 6;
   grid-row: row-start 4 / row-end 4;
   height: 25rem;
-  /* Gradient - Almost transparent */
+  /* Gradient */
   background: rgba(20, 20, 20, 0.05);
   background: linear-gradient(
     135deg,
@@ -17,7 +16,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1); // Ultra-subtle inner glow
 
-  /* Hover State - Slight intensification */
+  /* Hover State */
   &:hover {
     background: linear-gradient(
       135deg,
@@ -26,8 +25,59 @@
     );
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
       inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
+    .content {
+      &_word {
+        color: $soft-red;
+      }
+    }
   }
 
-  /* Transition for smooth hover */
   transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+
+  padding: 2rem;
+  position: relative;
+
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -85%;
+    right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/element-line2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.4;
+
+    z-index: 0;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  margin-left: 1.5rem;
+  &_text_1 {
+    color: $light-gray;
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  &_text_2 {
+    color: $light-gray;
+    font-size: 4rem;
+  }
+
+  &_icon {
+    color: $light-gray;
+    position: absolute;
+    font-size: 8.2rem;
+    top: 1rem;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
 }

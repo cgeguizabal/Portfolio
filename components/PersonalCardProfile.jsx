@@ -2,7 +2,7 @@
 
 import personalCardProfile from "../styles/components/personalCard.module.scss";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useEffect } from "react";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
