@@ -1,10 +1,9 @@
 .container {
-  // background-color: rgb(236, 215, 169);
   border-radius: 2rem;
   grid-column: col-start 7 / col-end 8;
   grid-row: row-start 1 / row-end 3;
 
-  /* Gradient - Almost transparent */
+  /* Gradient */
   background: rgba(20, 20, 20, 0.05);
   background: linear-gradient(
     135deg,
@@ -17,7 +16,7 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1); // Ultra-subtle inner glow
 
-  /* Hover State - Slight intensification */
+  /* Hover State */
   &:hover {
     background: linear-gradient(
       135deg,
@@ -28,7 +27,88 @@
       inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
   }
 
-  /* Transition for smooth hover */
-    transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+  transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
 
+  // &:has(.content_contact:hover) {
+  //   border-bottom: 5px solid $light-gray;
+  // }
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.content {
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: repeat(
+    5,
+    [row-start] minmax(min-content, 12.8rem) [row-end]
+  );
+  grid-template-columns: 1fr;
+
+  &_home,
+  &_about,
+  &_showcase,
+  &_skills,
+  &_contact {
+    flex: 0 0 auto; // Prevent items from stretching
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $light-gray;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    &:hover {
+      cursor: pointer;
+      background-color: $graphite;
+      font-weight: 500;
+      box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 0.096);
+
+      border-bottom: 5px solid $light-gray;
+      .content_icon {
+        transform: scale(140%);
+        color: $soft-red;
+      }
+    }
+
+    transition: all 0.3s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+  }
+  &_home {
+    // margin-top: 2rem;
+    grid-row: row-start 1 / row-end 1;
+    border-bottom: 1px solid $dark-gray;
+  }
+  &_about {
+    grid-row: row-start 2 / row-end 2;
+    border-bottom: 1px solid $dark-gray;
+  }
+  &_showcase {
+    grid-row: row-start 3 / row-end 3;
+    border-bottom: 1px solid $dark-gray;
+  }
+  &_skills {
+    grid-row: row-start 4 / row-end 4;
+    border-bottom: 1px solid $dark-gray;
+  }
+  &_contact {
+    // margin-bottom: 2rem;
+    grid-row: row-start 5 / row-end 5;
+  }
+
+  &_line {
+    width: 100%;
+    height: 1px;
+    border: 0;
+    height: 1px;
+    background: $light-gray;
+    margin: 1rem 0;
+    width: 100%;
+  }
+  &_icon {
+    color: $light-gray;
+    font-size: 3.6rem;
+  }
 }
