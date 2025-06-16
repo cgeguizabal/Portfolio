@@ -18,6 +18,7 @@ function PhraseSection() {
     <motion.div
       className={phraseSection.container}
       initial={{ opacity: 0, y: 100 }}
+      exit={{ opacity: 0, y: 100, transition: { duration: 1 } }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{
         once: true,

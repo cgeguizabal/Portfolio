@@ -11,6 +11,8 @@ import { BsFileEarmarkPerson } from "react-icons/bs";
 
 import { VscTools } from "react-icons/vsc";
 
+import usebuttonStore from "@/store/buttonStore";
+
 const dosis = Dosis({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -19,6 +21,18 @@ const dosis = Dosis({
 
 function RightSideMenu() {
   const [isMounted, setIsMounted] = useState(false);
+  const {
+    aboutSection,
+    welcomingSection,
+    showCaseSection,
+    skillsSection,
+    contactSection,
+    showHome,
+    showAbout,
+    showShowCase,
+    showSkills,
+    showContact,
+  } = usebuttonStore();
 
   useEffect(() => {
     setIsMounted(true);
@@ -38,7 +52,7 @@ function RightSideMenu() {
     >
       <div className={`${rightSideMenu.content}`}>
         {/* HOME */}
-        <motion.div
+        <motion.button
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -47,12 +61,13 @@ function RightSideMenu() {
             opacity: { duration: 2, ease: "easeOut" },
           }}
           className={`${rightSideMenu.content_home} ${dosis.className}`}
+          onClick={showHome}
         >
           <RiHome9Line className={rightSideMenu.content_icon} />
           <span className={rightSideMenu.content_text}>HOME</span>
-        </motion.div>
+        </motion.button>
         {/* ABOUT */}
-        <motion.div
+        <motion.button
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -60,14 +75,19 @@ function RightSideMenu() {
             y: { duration: 1.2, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
-          className={`${rightSideMenu.content_about} ${dosis.className}`}
+          className={
+            aboutSection
+              ? `${rightSideMenu.selected} ${dosis.className}`
+              : `${rightSideMenu.content_about} ${dosis.className}`
+          }
+          onClick={showAbout}
         >
           <BsFileEarmarkPerson className={rightSideMenu.content_icon} />
 
           <span className={rightSideMenu.content_text}>ABOUT</span>
-        </motion.div>
+        </motion.button>
         {/*SHOWCASE*/}
-        <motion.div
+        <motion.button
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -75,14 +95,19 @@ function RightSideMenu() {
             y: { duration: 1.4, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
-          className={`${rightSideMenu.content_showcase} ${dosis.className}`}
+          className={
+            showCaseSection
+              ? `${rightSideMenu.selected} ${dosis.className}`
+              : `${rightSideMenu.content_showcase} ${dosis.className}`
+          }
+          onClick={showShowCase}
         >
           <PiSuitcase className={rightSideMenu.content_icon} />
 
           <span className={rightSideMenu.content_text}>SHOWCASE</span>
-        </motion.div>
+        </motion.button>
         {/* SKILLS */}
-        <motion.div
+        <motion.button
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -90,14 +115,19 @@ function RightSideMenu() {
             y: { duration: 1.5, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
-          className={`${rightSideMenu.content_skills} ${dosis.className}`}
+          className={
+            skillsSection
+              ? `${rightSideMenu.selected} ${dosis.className}`
+              : `${rightSideMenu.content_skills} ${dosis.className}`
+          }
+          onClick={showSkills}
         >
           <VscTools className={rightSideMenu.content_icon} />
 
           <span className={rightSideMenu.content_text}>SKILLS</span>
-        </motion.div>
+        </motion.button>
         {/*CONTACT*/}
-        <motion.div
+        <motion.button
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -105,12 +135,17 @@ function RightSideMenu() {
             y: { duration: 1.6, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
-          className={`${rightSideMenu.content_contact} ${dosis.className}`}
+          className={
+            contactSection
+              ? `${rightSideMenu.selected} ${dosis.className}`
+              : `${rightSideMenu.content_contact} ${dosis.className}`
+          }
+          onClick={showContact}
         >
           <MdConnectWithoutContact className={rightSideMenu.content_icon} />
 
           <span className={rightSideMenu.content_text}>CONTACT</span>
-        </motion.div>
+        </motion.button>
       </div>
     </motion.div>
   );

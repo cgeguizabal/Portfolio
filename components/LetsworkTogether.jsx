@@ -15,6 +15,7 @@ function LetsworkTogether() {
     <motion.div
       className={letsworkTogether.container}
       initial={{ opacity: 0, scale: 0.8, y: 75 }}
+      exit={{ opacity: 0, y: 100, transition: { duration: 1 } }}
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
       viewport={{
         once: true,

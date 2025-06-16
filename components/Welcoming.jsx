@@ -25,9 +25,10 @@ export default function Welcoming() {
       className={welcoming.container}
       initial={{ opacity: 0, y: -100 }}
       animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -100, transition: { duration: 1 } }}
       transition={{
-        delay: 0.2,
-        x: { duration: 0.7, ease: "easeInOut" },
+        delay: 0.5,
+        y: { duration: 0.7, ease: "easeInOut" },
         opacity: { duration: 1.7, ease: "easeOut" },
       }}
     >
