@@ -9,6 +9,7 @@ import RightSideMenu from "@/components/rightSideMenu";
 import LastSection from "@/components/LastSection";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Showcase from "@/components/Showcase";
 
 import { AnimatePresence } from "motion/react";
 
@@ -52,6 +53,9 @@ const HomePage = () => {
       <LastSection />
       <AnimatePresence mode="wait">
         {aboutSection && <About key="about" />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {showCaseSection && <Showcase key="showcase" />}
       </AnimatePresence>
       <AnimatePresence mode="wait">
         {contactSection && <Contact key="about" />}
