@@ -2,7 +2,7 @@
   border-radius: 2rem;
   grid-column: col-start 7 / col-end 8;
   grid-row: row-start 4 / row-end 4;
-  height: 25rem;
+  height: 20rem;
 
   /* Gradient */
   background: rgba(20, 20, 20, 0.05);
@@ -37,7 +37,7 @@
   &:before {
     content: "";
     position: absolute;
-    bottom: -42%;
+    bottom: -60%;
     right: -38%;
     transform: translate(-50%, -50%);
     width: 175px;
@@ -54,7 +54,7 @@
     content: "";
     position: absolute;
     top: 10%;
-    right: -35%;
+    right: -40%;
     transform: translate(-50%, -50%);
     width: 130px;
     height: 130px;
@@ -81,6 +81,7 @@
   &_text {
     display: flex;
     flex-direction: column;
+    line-height: 3.6rem;
     &_1 {
       font-size: 3rem;
       font-weight: 400;
@@ -94,6 +95,7 @@
     &_3 {
       font-size: 2.4rem;
       font-weight: 400;
+      margin-bottom: 0.5rem;
     }
   }
 }

@@ -2,7 +2,7 @@
   border-radius: 2rem;
   grid-column: col-start 1 / col-end 2;
   grid-row: row-start 4 / row-end 4;
-  height: 25rem;
+  height: 20rem;
 
   /* Gradient */
   background: rgba(20, 20, 20, 0.05);
@@ -36,11 +36,11 @@
   &:before {
     content: "";
     position: absolute;
-    bottom: -30%;
-    left: 20%;
+    bottom: -40%;
+    left: 19%;
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     background-image: url("/images/frontendMentor-gray-t-2.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -63,6 +63,7 @@
   &_text {
     display: flex;
     flex-direction: column;
+    line-height: 3.6rem;
     &_1 {
       font-size: 3rem;
       font-weight: 400;
@@ -72,12 +73,16 @@
       font-weight: 600;
       margin-left: 2rem;
       color: $soft-red;
+      @media (max-width: 1280px) {
+        font-size: 3rem; // Even smaller for mobile
+      }
     }
     &_3 {
       font-size: 2.4rem;
       font-weight: 400;
       align-self: flex-end;
       margin-right: 1.3rem;
+      margin-bottom: 0.5rem;
     }
   }
 }
