@@ -60,8 +60,9 @@
   display: flex;
   flex-direction: column;
 
-  /* Scrollbar Styling - Glass Morphism Version */
+  /* Scrollbar Styling */
   scrollbar-width: thin;
+  scroll-behavior: smooth;
   scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
   clip-path: inset(0 0 0 0 round 2rem);
 
@@ -75,5 +76,126 @@
     border-radius: 3px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+  // height: auto;
+  min-height: min-content; // Prevent collapse
+  padding-bottom: 4rem;
+
+  &_title {
+    color: $dark-gray;
+    font-size: 3rem;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_icon {
+      font-size: 5rem;
+    }
+  }
+  &_text_container {
+    margin-top: 2rem;
+  }
+  &_text {
+    &_1 {
+      color: $light-gray;
+      font-size: 3rem;
+      font-weight: 300;
+    }
+    &_2 {
+      color: $light-gray;
+      font-size: 3.6rem;
+      font-weight: 500;
+    }
+  }
+
+  &_main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    margin-top: 5rem;
+    padding-bottom: 2rem;
+
+    &_1 {
+      display: grid;
+      grid-template-columns: 26rem;
+      gap: 3rem;
+      flex: 0 1 auto;
+      @media (max-width: 1280px) {
+        grid-template-columns: 22rem;
+      }
+    }
+
+    &_2 {
+      display: grid;
+      grid-template-columns: 26rem;
+      gap: 3rem;
+      flex: 0 1 auto;
+      @media (max-width: 1280px) {
+        grid-template-columns: 22rem;
+      }
+    }
+  }
+}
+
+.project {
+  &_1 {
+    width: 100%;
+    background-color: rgb(29, 29, 29);
+    border: solid 0.5px $dark-gray;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    max-height: 30rem;
+
+    &:hover {
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+
+  &_img {
+    width: 22rem;
+    border-radius: 1.5rem;
+    transition: transform 0.3s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+    transform: scale(100%);
+    transform-origin: center bottom;
+    will-change: transform; // Optimization
+    @media (max-width: 1280px) {
+      width: 18rem;
+    }
+
+    &_show {
+      width: 100%;
+      border-radius: 2rem;
+    }
+
+    .project_1:hover & {
+      transform: scale(135%);
+    }
+  }
+
+  &_texts {
+    color: $light-gray;
+    position: relative; // Keeps text above image
+    z-index: 2;
+    &_type {
+      font-size: 2rem;
+    }
+    &_title {
+      font-size: 3rem;
+    }
   }
 }
