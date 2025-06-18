@@ -43,31 +43,46 @@ function Showcase() {
         <div className={showcase.content_main}>
           <div className={showcase.content_main_1}>
             <ProjectCard
-              img="images/bf1e68214791583.Y3JvcCwzMDY4LDI0MDAsNjgsMA.jpg"
-              type="Web Development"
-              title="Portfolio"
+              img="images/propertyPulse.png"
+              type="Full-Stack web application"
+              title="Property Pulse"
             />
             <ProjectCard
-              img="images/bf1e68214791583.Y3JvcCwzMDY4LDI0MDAsNjgsMA.jpg"
-              type="Web Development"
-              title="Portfolio"
+              img="images/clipboard.png"
+              type="Tailwind responsive web application"
+              title="Clipboard"
+            />
+            <ProjectCard
+              img="images/medcare.png"
+              type="Data storage with FireStorey"
+              title="Medcare"
+            />
+            <ProjectCard
+              img="images/spotify.png"
+              type="Form validation and props"
+              title="Spotify"
             />
           </div>
           <div className={showcase.content_main_2}>
             <ProjectCard
-              img="images/bf1e68214791583.Y3JvcCwzMDY4LDI0MDAsNjgsMA.jpg"
-              type="Web Development"
-              title="Portfolio"
+              img="images/loopStudio.png"
+              type="Tailwind responsive web application"
+              title="LoopStudio"
             />
             <ProjectCard
-              img="images/bf1e68214791583.Y3JvcCwzMDY4LDI0MDAsNjgsMA.jpg"
-              type="Web Development"
-              title="Portfolio"
+              img="images/cartlist.png"
+              type="Global managment with zustand"
+              title="Product listing"
             />
             <ProjectCard
-              img="images/bf1e68214791583.Y3JvcCwzMDY4LDI0MDAsNjgsMA.jpg"
-              type="Web Development"
-              title="Portfolio"
+              img="images/api.png"
+              type="RESTful API"
+              title="Management"
+            />
+            <ProjectCard
+              img="images/sciQuest.png"
+              type="Fetching public API"
+              title="SciQuest"
             />
           </div>
         </div>

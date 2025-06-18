@@ -35,10 +35,11 @@ const About = () => {
 
         <div className={about.content_text_container}>
           <p className={`${about.content_text} ${dosis.className}`}>
-            I’m a junior full-stack web developer with experience in JavaScript,
-            CSS, Next.js, vanilla JavaScript, React, and Tailwind. I build
-            dynamic, responsive applications using APIs and Firestore, applying
-            UX/UI design principles to create intuitive user interfaces.
+            Hello there, I’m a junior full-stack web developer with experience
+            in JavaScript, CSS, Next.js, vanilla JavaScript, React, and
+            Tailwind. I build dynamic, responsive applications using APIs and
+            Firestore, applying UX/UI design principles to create intuitive user
+            interfaces.
           </p>
           <p className={`${about.content_text} ${dosis.className}`}>
             On the backend, I work with PHP, Node.js with MongoDB, and SQL,
@@ -120,7 +121,7 @@ Managed site users and content efficiently, maintaining data security and struct
           <ExperienceBox
             className={about.experience_box_3}
             place="Moda Week International(MWINTL)"
-            position="Remote — New York, United States"
+            position="Content Creator & Web Developer"
             mode="Remote — New York, United States"
             date="Jan 2022 – Dec 2024"
             work="Edited color palettes, photo compositions, and created corporate branding materials for fashion shows and events. Designed promotional assets and edited videos for social media and YouTube using Adobe Premiere and After Effects.
