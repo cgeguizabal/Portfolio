@@ -22,9 +22,9 @@ body {
 .container {
   display: grid;
   grid-template-rows:
-    [full-start]minmax(3rem, 1fr)
+    [full-start]minmax(2rem, 1fr)
     [center-start] repeat(4, [row-start] minmax(15rem, 20rem) [row-end])
-    [center-end] minmax(3rem, 1fr)
+    [center-end] minmax(2rem, 1fr)
     [full-end];
   grid-template-columns:
     [full-start] minmax(6rem, 1fr)

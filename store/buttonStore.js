@@ -1,4 +1,3 @@
-import Welcoming from "@/components/Welcoming";
 import { create } from "zustand";
 
 const usebuttonStore = create((set) => ({
