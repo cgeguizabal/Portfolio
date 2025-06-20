@@ -45,7 +45,7 @@ function RightSideMenu() {
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{
-        delay: 0.2,
+        delay: 0,
         x: { duration: 0.5, ease: "easeInOut" },
         opacity: { duration: 1, ease: "easeOut" },
       }}
@@ -56,7 +56,7 @@ function RightSideMenu() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 1.2,
+            delay: 0,
             y: { duration: 1.1, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
@@ -71,7 +71,7 @@ function RightSideMenu() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 1.3,
+            delay: 0,
             y: { duration: 1.2, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
@@ -91,7 +91,7 @@ function RightSideMenu() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 1.4,
+            delay:0,
             y: { duration: 1.4, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
@@ -111,7 +111,7 @@ function RightSideMenu() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 1.5,
+            delay: 0,
             y: { duration: 1.5, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
@@ -131,7 +131,7 @@ function RightSideMenu() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 1.6,
+            delay: 0,
             y: { duration: 1.6, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}

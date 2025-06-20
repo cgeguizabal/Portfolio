@@ -22,7 +22,7 @@ function LetsworkTogether() {
         margin: "-10%",
       }}
       transition={{
-        delay: 0.2,
+        delay: 0,
         x: { duration: 0.5, ease: "easeInOut" },
         opacity: { duration: 1.3, ease: "easeOut" },
       }}
@@ -33,7 +33,7 @@ function LetsworkTogether() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              delay: 0.5,
+              delay: 0,
               y: { duration: 0.5, ease: "easeInOut" },
               opacity: { duration: 2, ease: "easeOut" },
             }}
@@ -45,7 +45,7 @@ function LetsworkTogether() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              delay: 0.8,
+              delay: 0,
               y: { duration: 1, ease: "easeInOut" },
               opacity: { duration: 2, ease: "easeOut" },
             }}
@@ -57,7 +57,7 @@ function LetsworkTogether() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              delay: 1,
+              delay: 0,
               y: { duration: 1.5, ease: "easeInOut" },
               opacity: { duration: 2, ease: "easeOut" },
             }}

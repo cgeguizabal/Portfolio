@@ -18,6 +18,29 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1); // Ultra-subtle inner glow
 
+  transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 5%; // Anchor to bottom
+    right: 0; // Anchor to right
+    width: 100%; // Reduce width to prevent overflow
+    height: 100%; // Reduce height to prevent overflow
+    background-image: url("/images/line-trees.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right; // Align to bottom-right corner
+    opacity: 0.4;
+    z-index: 0;
+    transform: none; // Remove translate()
+  }
+
   /* Hover State */
   &:hover {
     background: linear-gradient(
@@ -29,26 +52,147 @@
       inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
   }
 
-  transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
-
-  padding: 2rem;
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: -85%;
-    right: -50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  @media (max-width: 1280px) {
+    overflow-y: auto; // Enables vertical scrolling
+    overflow-x: hidden; // Prevents horizontal scroll
     height: 100%;
-    background-image: url("/images/line-trees.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 0.4;
+    // max-height: 100%;
+    display: flex;
+    flex-direction: column;
 
-    z-index: 0;
+    /* Scrollbar Styling  */
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+    clip-path: inset(0 0 0 0 round 2rem);
+
+    &::-webkit-scrollbar {
+      width: 6px;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    &::before {
+      bottom: -8%; // Anchor to bottom
+    }
+  }
+}
+
+.content {
+  color: $light-gray;
+  &_section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3rem;
+    color: $dark-gray;
+  }
+
+  &_phrase {
+    margin-top: 3rem;
+    font-size: 5rem;
+    font-weight: 300;
+  }
+}
+
+.form_contact {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 1;
+  margin-top: 3rem;
+
+  .content_form_group {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    margin-top: 2rem;
+    label {
+      color: $dark-gray;
+      margin-bottom: 1rem;
+      font-weight: 700;
+
+      font-size: 2rem;
+    }
+
+    input {
+      width: 100%;
+
+      background-color: $graphite;
+      border: solid 0.5px $dark-gray;
+      padding: 1.5rem 1rem;
+      color: $light-gray;
+
+      border-radius: 1rem;
+      &:focus {
+        outline: none;
+        border: 2px solid $light-gray;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+        background-color: transparent;
+        color: $light-gray;
+      }
+    }
+  }
+
+  .contact_form_button {
+    align-self: flex-start;
+    // max-width: max-content;
+  }
+}
+
+.form_main {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  z-index: 3;
+  flex-wrap: wrap;
+  &_1,
+  &_2 {
+    width: 28rem;
+  }
+}
+.content_form_message {
+  height: 15rem;
+  line-height: 1.5;
+  resize: vertical;
+
+  width: 100%;
+
+  background-color: $graphite;
+  border: solid 0.5px $dark-gray;
+  border-radius: 1rem;
+  padding: 1.5rem 1rem;
+  color: $light-gray;
+  &:focus {
+    outline: none;
+    border: 2px solid $light-gray;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+    background-color: transparent;
+    color: $light-gray;
+  }
+}
+.contact_form_button {
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  background-color: $graphite;
+  font-size: 2.4rem;
+  border: none;
+  color: $light-gray;
+  font-weight: 500;
+  z-index: 3;
+  margin-top: 1rem;
+
+  transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+  &:hover {
+    cursor: pointer;
+    background-color: $soft-red;
+    color: white;
+    border: none;
+    transform: scale(105%);
   }
 }

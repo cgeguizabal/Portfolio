@@ -27,7 +27,7 @@ export default function Welcoming() {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -100, transition: { duration: 1 } }}
       transition={{
-        delay: 0.5,
+        delay: 0,
         y: { duration: 0.7, ease: "easeInOut" },
         opacity: { duration: 1.7, ease: "easeOut" },
       }}
@@ -38,7 +38,7 @@ export default function Welcoming() {
           initial={{ opacity: 0, y: -110 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.5,
+            delay: 0,
             y: { duration: 1.5, ease: "easeInOut" },
             opacity: { duration: 1.5, ease: "easeOut" },
           }}
@@ -55,7 +55,7 @@ export default function Welcoming() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.7,
+            delay: 0,
             y: { duration: 1.7, ease: "easeInOut" },
             opacity: { duration: 2.5, ease: "easeOut" },
           }}

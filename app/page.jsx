@@ -10,6 +10,7 @@ import LastSection from "@/components/LastSection";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Showcase from "@/components/Showcase";
+import SkillsAndTools from "@/components/SkillsAndTools";
 
 import { AnimatePresence } from "motion/react";
 
@@ -59,6 +60,9 @@ const HomePage = () => {
       </AnimatePresence>
       <AnimatePresence mode="wait">
         {contactSection && <Contact key="about" />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {skillsSection && <SkillsAndTools key="skills" />}
       </AnimatePresence>
     </>
   );

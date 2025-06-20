@@ -63,6 +63,7 @@
     align-items: center;
     width: 100%;
     justify-content: center;
+    transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
     &:hover {
       cursor: pointer;
       background-color: $graphite;
@@ -75,8 +76,6 @@
         color: $soft-red;
       }
     }
-
-    transition: all 0.5s cubic-bezier(0.32, -0.01, 0.57, 0.95);
   }
   &_home {
     // margin-top: 2rem;
@@ -112,6 +111,7 @@
   &_icon {
     color: $light-gray;
     font-size: 3.6rem;
+    transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
   }
 }
 

@@ -23,17 +23,47 @@ const About = () => {
         transition: { duration: 1, ease: "easeOut" },
       }}
       transition={{
-        delay: 2,
-        y: { duration: 0.7, ease: "easeInOut" },
+        delay: 0,
+        y: { duration: 0.8, ease: "easeInOut" },
         opacity: { duration: 1.7, ease: "easeOut" },
       }}
     >
       <div className={about.content}>
-        <div className={`${about.content_title} ${dosis.className}`}>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{
+            opacity: 0,
+            y: 100,
+            transition: { duration: 1.2, ease: "easeOut" },
+            opacity: { duration: 1.7, ease: "easeOut" },
+          }}
+          transition={{
+            delay: 0,
+            y: { duration: 1, ease: "easeInOut" },
+            opacity: { duration: 1.7, ease: "easeOut" },
+          }}
+          className={`${about.content_title} ${dosis.className}`}
+        >
           <h3>Resume</h3>
-        </div>
+        </motion.div>
 
-        <div className={about.content_text_container}>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{
+            opacity: 0,
+            y: 100,
+            transition: { duration: 1, ease: "easeOut" },
+            opacity: { duration: 1.7, ease: "easeOut" },
+          }}
+          transition={{
+            delay: 0,
+            y: { duration: 1, ease: "easeInOut" },
+            opacity: { duration: 1.7, ease: "easeOut" },
+          }}
+          className={about.content_text_container}
+        >
           <p className={`${about.content_text} ${dosis.className}`}>
             Hello there, I’m a junior full-stack web developer with experience
             in JavaScript, CSS, Next.js, vanilla JavaScript, React, and
@@ -49,17 +79,47 @@ const About = () => {
             strong communication and leadership skills. I’m eager to keep
             learning and contribute to the success of every project I join.
           </p>
-        </div>
+        </motion.div>
 
-        <div className={about.wrapper}>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{
+            opacity: 0,
+            y: 100,
+            transition: { duration: 1.7, ease: "easeOut" },
+            opacity: { duration: 3, ease: "easeOut" },
+          }}
+          transition={{
+            delay: 0,
+            y: { duration: 1.7, ease: "easeInOut" },
+            opacity: { duration: 1.7, ease: "easeOut" },
+          }}
+          className={about.wrapper}
+        >
           {/* Education Icon */}
-          <div className={about.education_container}>
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{
+              opacity: 0,
+              y: 100,
+              transition: { duration: 5, ease: "easeOut" },
+              opacity: { duration: 3, ease: "easeOut" },
+            }}
+            transition={{
+              delay: 3,
+              y: { duration: 0.7, ease: "easeInOut" },
+              opacity: { duration: 1.7, ease: "easeOut" },
+            }}
+            className={about.education_container}
+          >
             <img
               src="images/element-education.png"
               alt="education"
               className={about.content_education_icon}
             />
-          </div>
+          </motion.div>
           <PiGraduationCapLight className={about.content_education_icon_2} />
 
           {/* Experience Icon */}
@@ -136,7 +196,7 @@ Developed a complete website and visual assets using WIX and Adobe tools. Manage
             work="Redesigned brand identity, created merchandise, maps, and media from tourism activities in the Amazon using Adobe tools. Edited photos and videos, aligning visual content with the agency’s brand.
 Developed a full website using WIX and Adobe software, ran ad campaigns on Meta Business Suite, conducted market research in Spanish and English, monitored Google Analytics, supported ad strategies, and assisted as a translator for tourist activities."
           />
-        </div>
+        </motion.div>
       </div>
     </motion.div>
   );

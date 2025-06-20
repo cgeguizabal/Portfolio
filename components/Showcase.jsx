@@ -43,26 +43,71 @@ function Showcase() {
           transition: { duration: 1, ease: "easeOut" },
         }}
         transition={{
-          delay: 2,
-          y: { duration: 0.7, ease: "easeInOut" },
-          opacity: { duration: 1.7, ease: "easeOut" },
+          delay: 0,
+          y: { duration: 1, ease: "easeInOut" },
+          opacity: { duration: 2, ease: "easeOut" },
         }}
       >
         <div className={showcase.content}>
-          <div className={`${showcase.content_title} ${dosis.className}`}>
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{
+              opacity: 0,
+              y: 100,
+              transition: { duration: 1.2, ease: "easeOut" },
+              opacity: { duration: 1.7, ease: "easeOut" },
+            }}
+            transition={{
+              delay: 0,
+              y: { duration: 1, ease: "easeInOut" },
+              opacity: { duration: 1.7, ease: "easeOut" },
+            }}
+            className={`${showcase.content_title} ${dosis.className}`}
+          >
             <h3>PORTFOLIO</h3>
             <PiCompassRoseThin className={showcase.content_title_icon} />
-          </div>
-          <div className={showcase.content_text_container}>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{
+              opacity: 0,
+              y: 100,
+              transition: { duration: 1.3, ease: "easeOut" },
+              opacity: { duration: 1.7, ease: "easeOut" },
+            }}
+            transition={{
+              delay: 0,
+              y: { duration: 1.3, ease: "easeInOut" },
+              opacity: { duration: 1.7, ease: "easeOut" },
+            }}
+            className={showcase.content_text_container}
+          >
             <p className={`${showcase.content_text_1} ${dosis.className}`}>
               Direction turns ideas into journeys
             </p>
             <p className={`${showcase.content_text_2} ${dosis.className}`}>
               A compass points the way to greatness
             </p>
-          </div>
+          </motion.div>
           <div className={showcase.content_main}>
-            <div className={showcase.content_main_1}>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{
+                opacity: 0,
+                y: 100,
+                transition: { duration: 1.7, ease: "easeOut" },
+                opacity: { duration: 1.7, ease: "easeOut" },
+              }}
+              transition={{
+                delay: 0,
+                y: { duration: 1.7, ease: "easeInOut" },
+                opacity: { duration: 1.7, ease: "easeOut" },
+              }}
+              className={showcase.content_main_1}
+            >
               {/* Property Pulse */}
               <ProjectCard
                 img="images/propertyPulse.png"
@@ -91,8 +136,23 @@ function Showcase() {
                 title="Spotify"
                 onClick={showSpotify}
               />
-            </div>
-            <div className={showcase.content_main_2}>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{
+                opacity: 0,
+                y: 100,
+                transition: { duration: 1.7, ease: "easeOut" },
+                opacity: { duration: 1.7, ease: "easeOut" },
+              }}
+              transition={{
+                delay: 0,
+                y: { duration: 1.7, ease: "easeInOut" },
+                opacity: { duration: 1.7, ease: "easeOut" },
+              }}
+              className={showcase.content_main_2}
+            >
               {/* LOOPSTUDIO */}
               <ProjectCard
                 img="images/loopStudio.png"
@@ -121,7 +181,7 @@ function Showcase() {
                 title="SciQuest"
                 onClick={showSciQuest}
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.div>

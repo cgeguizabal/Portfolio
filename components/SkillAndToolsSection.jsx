@@ -61,7 +61,7 @@ function SkillAndToolsSection() {
         margin: "-10%",
       }}
       transition={{
-        delay: 0.2,
+        delay: 0,
         x: { duration: 0.5, ease: "easeInOut" },
         opacity: { duration: 1.3, ease: "easeOut" },
       }}
@@ -71,7 +71,7 @@ function SkillAndToolsSection() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.5,
+            delay: 0,
             y: { duration: 1.2, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
@@ -80,7 +80,7 @@ function SkillAndToolsSection() {
           <h2
             className={`${skillAndToolsSection.content_text_1} ${dosis.className}`}
           >
-            My Skill <br />
+            My Skills <br />
             and Tools
           </h2>
           <GrTechnology className={skillAndToolsSection.content_text_2} />
@@ -89,7 +89,7 @@ function SkillAndToolsSection() {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay: 0.8,
+            delay: 0,
             y: { duration: 1.5, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}

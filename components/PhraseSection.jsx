@@ -12,8 +12,8 @@ const dosis = Dosis({
 });
 
 function PhraseSection() {
-  const containerDuration = 0.7;
-  const containerDelay = 0.3;
+  const containerDuration = 0;
+  const containerDelay = 0;
   return (
     <motion.div
       className={phraseSection.container}
@@ -25,7 +25,7 @@ function PhraseSection() {
         margin: "-10%",
       }}
       transition={{
-        delay: 0.2,
+        delay: 0,
         y: { duration: 0.5, ease: "easeInOut" },
         opacity: { duration: 1, ease: "easeOut" },
       }}

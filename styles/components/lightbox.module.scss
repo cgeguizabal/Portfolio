@@ -16,11 +16,9 @@
   background: linear-gradient(
     135deg,
     rgba(84, 84, 84, 0.15) 0%,
-
     rgba(150, 149, 149, 0.2) 100%
   );
   backdrop-filter: blur(60px);
-  /* Shadow that works with transparency */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   padding: 2rem;
@@ -30,13 +28,22 @@
   position: relative;
   min-height: 30rem;
   max-height: 60rem;
-
   margin: 2rem 2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+  clip-path: inset(0 0 0 0 round 2rem);
+
+  // Media query
   @media (max-width: 1280px) {
     max-height: 50rem;
   }
 
-  /* Hover State */
+  // Hover state
   &:hover {
     background: linear-gradient(
       135deg,
@@ -47,18 +54,7 @@
       inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
   }
 
-  overflow-y: auto; // Enables vertical scrolling
-  overflow-x: hidden; // Prevents horizontal scroll
-  // max-height: 100%;
-  display: flex;
-  flex-direction: column;
-
-  /* Scrollbar Styling */
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
-  clip-path: inset(0 0 0 0 round 2rem);
-
+  // Scrollbar pseudo-elements
   &::-webkit-scrollbar {
     width: 6px;
     background: transparent;
@@ -79,10 +75,8 @@
   align-items: center;
   top: 1rem;
   right: 2rem;
-
   font-size: 4rem;
   background: none;
-
   border: none;
   cursor: pointer;
   color: $light-gray;
@@ -148,31 +142,28 @@
     }
   }
 
-  ////////////////////////////////////////
-  ///   paragraph
+  // Paragraph
   &_paragraph {
-    margin-top: 3rem;
+    margin-top: 5rem;
     font-size: 2.4rem;
     color: $light-gray;
-    font-weight: 400;
+    font-weight: 500;
     &_features {
       margin-top: 2rem;
-      font-weight: 600;
+      font-weight: 700;
     }
     &_list {
       margin-left: 2rem;
     }
   }
 
-  ////////////////////////////////////
-  /// IMG
+  // Image
   &_img {
     margin-top: 5rem;
     max-width: 100rem;
     min-width: 40rem;
     overflow: hidden;
     height: 40rem;
-
     display: flex;
     justify-content: center;
     text-align: center;

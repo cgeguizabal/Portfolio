@@ -12,8 +12,8 @@ const dosis = Dosis({
 });
 
 function LastSection() {
-  const containerDuration = 0.7;
-  const containerDelay = 0.3;
+  const containerDuration = 0;
+  const containerDelay = 0;
   return (
     <motion.div
       className={lastSection.container}
