@@ -196,3 +196,12 @@
     transform: scale(105%);
   }
 }
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  &_message {
+    font-size: 2rem;
+  }
+}

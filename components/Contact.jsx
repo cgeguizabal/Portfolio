@@ -1,5 +1,6 @@
+"use client";
 import { motion } from "motion/react";
-
+import { useState, useRef } from "react";
 import { Dosis } from "next/font/google";
 import contact from "@/styles/components/contact.module.scss";
 import { GrContactInfo } from "react-icons/gr";
@@ -10,6 +11,58 @@ const dosis = Dosis({
   display: "swap",
 });
 const Contact = () => {
+  const formRef = useRef();
+  const [status, setStatus] = useState({ type: "idle", message: "" });
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus({ type: "loading", message: "Sending..." });
+
+    const formData = new FormData(e.currentTarget);
+    // Collect form data into an object
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    };
+    if (!validateEmail(data.email)) {
+      setStatus({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    try {
+      const res = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Network response was not ok");
+
+      const result = await res.json();
+      if (result.success) {
+        setStatus({ type: "success", message: "Message sent successfully!" });
+        formRef.current.reset();
+        // Show modal or overlay here (see next section)
+      } else {
+        throw new Error(result.error || "Server error");
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus({
+        type: "error",
+        message: "Failed to send. Please try again.",
+      });
+    }
+  };
+
   return (
     <>
       <motion.div
@@ -39,7 +92,11 @@ const Contact = () => {
             <p>Let's work together!</p>
           </div>
           <div className={contact.content_form_container}>
-            <form action="submit" className={contact.form_contact}>
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className={contact.form_contact}
+            >
               <div className={contact.form_main}>
                 <div className={contact.form_main_1}>
                   <div className={contact.content_form_group}>
@@ -97,9 +154,18 @@ const Contact = () => {
                   placeholder="Tell me about you project"
                 />
               </div>
-              <button className={contact.contact_form_button}>
-                Get in touch!
-              </button>
+              <div className={contact.status}>
+                <button
+                  type="submit"
+                  disabled={status.type === "loading"}
+                  className={contact.contact_form_button}
+                >
+                  {status.type === "loading" ? "Sending..." : "Get in touch!"}
+                </button>
+                {status.message && (
+                  <p className={contact.status_message}>{status.message}</p>
+                )}
+              </div>
             </form>
           </div>
         </div>

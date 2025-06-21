@@ -90,6 +90,7 @@
   display: flex;
   gap: 1rem;
   margin-top: 0.5rem;
+  align-items: center;
   &_img {
     color: $light-gray;
     font-size: 1.4rem;
@@ -97,8 +98,10 @@
     &_container {
       background-color: $graphite;
       border: solid 0.5px $dark-gray;
-      padding: 1rem 1.2rem;
+      padding: 1.2rem 1.2rem;
       border-radius: 1rem;
+      display: flex;
+      align-items: center;
 
       &:hover {
         background-color: $dark-gray;
@@ -113,7 +116,6 @@
   font-size: 1.6rem;
   line-height: 2.6rem;
   margin-top: 0.5rem;
-  
 }
 // scroll-triggered.tsx
 /*

@@ -1,11 +1,11 @@
 "use client";
 import PersonalCardProfile from "@/components/PersonalCardProfile";
-import FrontendMentorSection from "@/components/frontendMentorSection";
+import FrontendMentorSection from "@/components/FrontendMentorSection";
 import Welcoming from "@/components/Welcoming";
-import PhraseSection from "@/components/phraseSection";
+import PhraseSection from "@/components/PhraseSection";
 import SkillAndToolsSection from "@/components/SkillAndToolsSection";
-import LetsworkTogether from "@/components/letsworkTogether";
-import RightSideMenu from "@/components/rightSideMenu";
+import LetsworkTogether from "@/components/LetsworkTogether";
+import RightSideMenu from "@/components/RightSideMenu";
 import LastSection from "@/components/LastSection";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
