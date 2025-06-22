@@ -1,0 +1,134 @@
+.container {
+  display: none;
+  @media (max-width: $bp-medium) {
+    display: inline-block;
+    border-radius: 2rem;
+    grid-column: 2;
+    grid-row: 5 / 6;
+
+    /* Gradient */
+    background: rgba(226, 12, 12, 0.05);
+    background: linear-gradient(
+      135deg,
+      rgba(84, 84, 84, 0.15) 0%,
+
+      rgba(150, 149, 149, 0.1) 100%
+    );
+    backdrop-filter: blur(60px);
+    /* Shadow that works with transparency */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1); // Ultra-subtle inner glow
+
+    transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+
+    // &:has(.content_contact:hover) {
+    //   border-bottom: 5px solid $light-gray;
+    // }
+    gap: 0.5rem;
+    overflow: hidden;
+
+    /* Hover State */
+    &:hover {
+      background: linear-gradient(
+        135deg,
+        rgba(84, 84, 84, 0.1) 0%,
+        rgba(150, 149, 149, 0.12) 100%
+      );
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
+        inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+.content {
+  height: 100%;
+
+  display: flex;
+
+  &_home,
+  &_about,
+  &_showcase,
+  &_skills,
+  &_contact {
+    background-color: transparent; // add base
+    border: none;
+    flex: 0 0 auto; // Prevent items from stretching
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: $light-gray;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 20%;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+    &:hover {
+      cursor: pointer;
+      background-color: $graphite;
+      font-weight: 500;
+      box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 0.096);
+
+      border-bottom: 5px solid $light-gray;
+      .content_icon {
+        transform: scale(105%);
+        color: $soft-red;
+      }
+    }
+  }
+  &_home {
+    // margin-top: 2rem;
+
+    border-right: 1px solid $dark-gray;
+  }
+  &_about {
+    border-right: 1px solid $dark-gray;
+  }
+  &_showcase {
+    border-right: 1px solid $dark-gray;
+  }
+  &_skills {
+    border-right: 1px solid $dark-gray;
+  }
+  &_contact {
+    // margin-bottom: 2rem;
+  }
+
+  &_line {
+    width: 100%;
+    height: 1px;
+    border: 0;
+    height: 1px;
+    background: $light-gray;
+    margin: 1rem 0;
+    width: 100%;
+  }
+  &_icon {
+    color: $light-gray;
+    font-size: 3.6rem;
+    transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
+  }
+}
+
+.selected {
+  background-color: $graphite;
+  font-weight: 500;
+  box-shadow: inset 0 0 15px 5px rgba(255, 255, 255, 0.096);
+
+  border: none;
+  flex: 0 0 auto; // Prevent items from stretching
+  font-size: 1.5rem;
+
+  color: $light-gray;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 20%;
+  justify-content: center;
+  border-bottom: 5px solid $light-gray;
+  .content_icon {
+    transform: scale(140%);
+    color: $soft-red;
+  }
+}

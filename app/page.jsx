@@ -11,6 +11,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Showcase from "@/components/Showcase";
 import SkillsAndTools from "@/components/SkillsAndTools";
+import MobileMenu from "@/components/MobileMenu";
 
 import { AnimatePresence } from "motion/react";
 
@@ -51,6 +52,7 @@ const HomePage = () => {
         {welcomingSection && <PhraseSection key="welcoming" />}
       </AnimatePresence>
       <RightSideMenu />
+      <MobileMenu />
       <LastSection />
       <AnimatePresence mode="wait">
         {aboutSection && <About key="about" />}
