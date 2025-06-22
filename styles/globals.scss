@@ -8,6 +8,9 @@
 
 html {
   font-size: 62.5%; // 1rem = 10px
+  @media (max-width: $bp-medium) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -31,4 +34,19 @@ body {
     [center-start] repeat(8, [col-start] minmax(8rem, 14rem) [col-end])
     [center-end] minmax(6rem, 1fr) [full-end];
   gap: 2rem;
+  @media (max-width: $bp-medium) {
+    grid-template-columns:
+      [full-start-mobile] minmax(4rem, 1fr) [center-star-mobile] minmax(
+        8rem,
+        50rem
+      )
+      [center-end-mobile] minmax(4rem, 1fr) [full-end-mobile];
+
+    grid-template-rows:
+      [full-start-mobile]minmax(2rem, 1fr)
+      [center-start-mobile] repeat(3, minmax(15rem, 20rem))
+      minmax(5rem, 10rem) repeat(7, minmax(15rem, 20rem))
+      [center-end-mobile] minmax(2rem, 1fr)
+      [full-end-mobile];
+  }
 }

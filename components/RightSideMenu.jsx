@@ -50,7 +50,7 @@ function RightSideMenu() {
         opacity: { duration: 1, ease: "easeOut" },
       }}
     >
-      <div className={`${rightSideMenu.content}`}>
+      <nav className={`${rightSideMenu.content}`}>
         {/* HOME */}
         <motion.button
           initial={{ opacity: 0, y: -100 }}
@@ -91,7 +91,7 @@ function RightSideMenu() {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            delay:0,
+            delay: 0,
             y: { duration: 1.4, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
@@ -146,7 +146,7 @@ function RightSideMenu() {
 
           <span className={rightSideMenu.content_text}>CONTACT</span>
         </motion.button>
-      </div>
+      </nav>
     </motion.div>
   );
 }

@@ -2,6 +2,7 @@
   border-radius: 2rem;
   grid-column: col-start 1 / col-end 2;
   grid-row: row-start 4 / row-end 4;
+
   height: 20rem;
 
   /* Gradient */
@@ -17,16 +18,6 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1); // Ultra-subtle inner glow
 
-  /* Hover State */
-  &:hover {
-    background: linear-gradient(
-      135deg,
-      rgba(84, 84, 84, 0.1) 0%,
-      rgba(150, 149, 149, 0.12) 100%
-    );
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
-      inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
-  }
   transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
 
   padding: 2rem;
@@ -47,6 +38,29 @@
     background-position: center;
 
     z-index: 0;
+
+    @media (max-width: $bp-medium) {
+      bottom: -40%;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (max-width: $bp-medium) {
+    grid-column: 2;
+    grid-row: 11/ 12;
+  }
+
+  /* Hover State */
+  &:hover {
+    background: linear-gradient(
+      135deg,
+      rgba(84, 84, 84, 0.1) 0%,
+      rgba(150, 149, 149, 0.12) 100%
+    );
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
+      inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -75,6 +89,12 @@
       color: $soft-red;
       @media (max-width: 1280px) {
         font-size: 3rem; // smaller for mobile
+      }
+      @media (max-width: $bp-medium) {
+        font-size: 5rem;
+      }
+      @media (max-width: $bp-small) {
+        font-size: 4rem;
       }
     }
     &_3 {
