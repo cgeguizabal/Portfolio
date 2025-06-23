@@ -102,12 +102,13 @@
   &_tags {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+
     color: $light-gray;
     margin-top: 2rem;
     gap: 2rem;
     @media (max-width: $bp-medium) {
       gap: 1rem;
+      flex-wrap: wrap;
     }
 
     &_head {
