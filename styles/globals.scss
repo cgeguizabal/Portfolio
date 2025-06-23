@@ -21,8 +21,8 @@ body {
   background-attachment: fixed;
   min-height: 100vh;
   @media (max-width: $bp-medium) {
-    background-image: url("../assets/bg-mobile-3.png");
-    height: 100vh;
+    background-image: url("../assets/bg-mobile-6.png");
+    min-height: 140vh;
   }
 }
 
