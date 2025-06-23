@@ -46,11 +46,11 @@ body {
   gap: 2rem;
   @media (max-width: $bp-medium) {
     grid-template-columns:
-      [full-start-mobile] minmax(4rem, 1fr) [center-star-mobile] minmax(
+      [full-start-mobile] minmax(3rem, 1fr) [center-star-mobile] minmax(
         8rem,
         50rem
       )
-      [center-end-mobile] minmax(4rem, 1fr) [full-end-mobile];
+      [center-end-mobile] minmax(3rem, 1fr) [full-end-mobile];
 
     grid-template-rows:
       [full-start-mobile]minmax(2rem, 1fr)

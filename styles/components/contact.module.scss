@@ -28,17 +28,20 @@
   &::before {
     content: "";
     position: absolute;
-    bottom: 5%; // Anchor to bottom
-    right: 0; // Anchor to right
-    width: 100%; // Reduce width to prevent overflow
-    height: 100%; // Reduce height to prevent overflow
+    bottom: 5%;
+    right: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("/images/line-trees.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: bottom right; // Align to bottom-right corner
+    background-position: bottom right;
     opacity: 0.4;
     z-index: 0;
-    transform: none; // Remove translate()
+    transform: none;
+    @media (max-width: $bp-medium) {
+      bottom: 10%;
+    }
   }
 
   /* Hover State */
@@ -69,6 +72,9 @@
     &::-webkit-scrollbar {
       width: 6px;
       background: transparent;
+      @media (max-width: $bp-medium) {
+        display: none;
+      }
     }
 
     &::-webkit-scrollbar-thumb {
@@ -83,7 +89,10 @@
   }
 
   @media (max-width: $bp-medium) {
-    display: none;
+    grid-column: 2;
+    grid-row: 6 / 11;
+    min-width: 20rem;
+    overflow-y: hidden;
   }
 }
 
@@ -158,6 +167,9 @@
   &_1,
   &_2 {
     width: 28rem;
+    @media (max-width: $bp-medium) {
+      width: 40rem;
+    }
   }
 }
 .content_form_message {
