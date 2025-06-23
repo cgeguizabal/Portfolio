@@ -39,9 +39,6 @@
     opacity: 0.4;
     z-index: 0;
     transform: none;
-    @media (max-width: $bp-medium) {
-      bottom: 10%;
-    }
   }
 
   /* Hover State */
@@ -55,7 +52,7 @@
       inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
   }
 
-  @media (max-width: 1280px) {
+  @media (max-width: 1390px) {
     overflow-y: auto; // Enables vertical scrolling
     overflow-x: hidden; // Prevents horizontal scroll
     height: 100%;
