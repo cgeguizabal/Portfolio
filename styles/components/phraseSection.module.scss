@@ -83,6 +83,9 @@
     @media (max-width: $bp-small) {
       font-size: 2rem;
     }
+    @media (max-width: 30em) {
+      font-size: 2.2rem;
+    }
   }
   &_text_2 {
     color: $light-gray;

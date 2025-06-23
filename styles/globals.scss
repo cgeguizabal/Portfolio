@@ -20,9 +20,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 100vh;
-  //   @media (max-width: $bp-medium) {
-  //     background-image: url("../assets/bg-mobile-3.png");
-  //   }
+  @media (max-width: $bp-medium) {
+    background-image: url("../assets/bg-mobile-3.png");
+    height: 100vh;
+  }
 }
 
 .container {
