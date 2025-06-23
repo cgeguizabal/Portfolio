@@ -2,7 +2,6 @@
   border-radius: 2rem;
   grid-column: col-start 3 / col-end 6;
   grid-row: row-start 1 / row-end 4;
- 
 
   min-width: 50rem;
 
@@ -19,15 +18,11 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.1); // Ultra-subtle inner glow
 
-
-
   transition: all 0.2s cubic-bezier(0.32, -0.01, 0.57, 0.95);
 
   padding: 3rem;
   position: relative;
   overflow: hidden;
-
-
 
   /* Scrollable */
   overflow-y: auto; // Enables vertical scrolling
@@ -55,11 +50,13 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
 
-   @media (max-width: $bp-medium) {
-    display: none;
+  @media (max-width: $bp-medium) {
+    grid-column: 2;
+    grid-row: 6 / 11;
+    min-width: 20rem;
   }
 
-    /* Hover State */
+  /* Hover State */
   &:hover {
     background: linear-gradient(
       135deg,
@@ -101,11 +98,17 @@
       color: $light-gray;
       font-size: 3rem;
       font-weight: 300;
+      @media (max-width: $bp-medium) {
+        font-size: 2.8rem;
+      }
     }
     &_2 {
       color: $light-gray;
       font-size: 3.6rem;
       font-weight: 500;
+      @media (max-width: $bp-medium) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -113,6 +116,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 4rem;
     margin-top: 5rem;
     padding-bottom: 3rem;
@@ -125,6 +129,9 @@
       @media (max-width: 1280px) {
         grid-template-columns: 22rem;
       }
+      @media (max-width: $bp-medium) {
+        grid-template-columns: 35rem;
+      }
     }
 
     &_2 {
@@ -134,6 +141,9 @@
       flex: 0 1 auto;
       @media (max-width: 1280px) {
         grid-template-columns: 22rem;
+      }
+      @media (max-width: $bp-medium) {
+        grid-template-columns: 35rem;
       }
     }
   }
@@ -150,11 +160,16 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
-    max-height: 42rem;
+    max-height: 45rem;
 
     &:hover {
       background-color: transparent;
       cursor: pointer;
+    }
+    @media (max-width: $bp-medium) {
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
     }
   }
 
@@ -167,6 +182,9 @@
     will-change: transform; // Optimization
     @media (max-width: 1280px) {
       width: 18rem;
+    }
+    @media (max-width: $bp-medium) {
+      width: 30rem;
     }
 
     &_show {
@@ -181,7 +199,7 @@
 
   &_texts {
     color: $light-gray;
-    position: relative; // Keeps text above image
+    position: relative;
     z-index: 2;
     &_type {
       font-size: 1.8rem;

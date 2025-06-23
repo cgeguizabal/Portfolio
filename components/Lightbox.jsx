@@ -125,7 +125,7 @@ function Lightbox({
                     className={lightbox.content_tags_text_link}
                   >
                     {" "}
-                    See the code on GitHub.
+                    Click here to see the code on GitHub.
                   </a>
                 </p>
               </div>

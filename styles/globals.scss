@@ -10,6 +10,7 @@ html {
   font-size: 62.5%; // 1rem = 10px
   @media (max-width: $bp-medium) {
     font-size: 50%;
+    height: -webkit-fill-available; //test
   }
 }
 
@@ -22,7 +23,12 @@ body {
   min-height: 100vh;
   @media (max-width: $bp-medium) {
     background-image: url("../assets/bg-mobile-6.png");
-    min-height: 150vh;
+    background-attachment: scroll;
+    min-height: 100vh;
+    background-position: top center; //test
+    min-height: -webkit-fill-available; //test
+
+    // background-size: 100% auto; // Better mobile coverage
   }
 }
 
