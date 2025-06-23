@@ -24,23 +24,6 @@
   position: relative;
   overflow: hidden;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   bottom: -85%;
-  //   right: -50%;
-  //   transform: translate(-50%, -50%);
-  //   width: 100%;
-  //   height: 100%;
-  //   background-image: url("/images/line-trees.png");
-  //   background-repeat: no-repeat;
-  //   background-size: contain;
-  //   background-position: center;
-  //   opacity: 0.4;
-
-  //   z-index: 0;
-  // }
-
   /* Scrollable Container Fixes */
   overflow-y: auto; // Enables vertical scrolling
   overflow-x: hidden; // Prevents horizontal scroll
@@ -68,7 +51,9 @@
   }
 
   @media (max-width: $bp-medium) {
-    display: none;
+    grid-column: 2;
+    grid-row: 6 / 11;
+    min-width: 20rem;
   }
   /* Hover State */
   &:hover {
@@ -86,6 +71,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+
   flex: 1;
   min-height: 0;
   height: 100%;
@@ -121,6 +107,9 @@
         font-size: 4.4rem;
         align-self: end;
         justify-self: end;
+        @media (max-width: $bp-medium) {
+          grid-column: 2;
+        }
       }
     }
   }
@@ -134,6 +123,10 @@
         font-size: 4.4rem;
         align-self: end;
         justify-self: end;
+        @media (max-width: $bp-medium) {
+          grid-column: 2;
+          grid-row: 6;
+        }
       }
     }
   }
@@ -148,6 +141,11 @@
   grid-row-gap: 1.5rem;
   grid-template-rows: repeat(8, minmax(min-content, 10rem)) 2rem;
   justify-content: space-between;
+  @media (max-width: $bp-medium) {
+    grid-template-columns: minmax(5rem, 20rem) minmax(5rem, 20rem);
+    grid-template-rows: repeat(10, minmax(min-content, 10rem)) 2rem;
+    gap: 1rem;
+  }
 }
 .education_container {
   grid-column: col-start 1 / col-end 1;
@@ -155,6 +153,9 @@
   width: 12rem;
   height: 100%;
   align-content: end;
+  @media (max-width: $bp-medium) {
+    grid-column: 1;
+  }
 }
 .experience_container {
   grid-column: col-start 1 / col-end 1;
@@ -163,6 +164,10 @@
   height: 100%;
   align-content: end;
   padding-top: 5rem;
+  @media (max-width: $bp-medium) {
+    grid-column: 1;
+    grid-row: 6;
+  }
 }
 
 .education_box {
@@ -190,18 +195,34 @@
   &_1 {
     grid-row: 2;
     grid-column: col-start 1 / col-end 1;
+    @media (max-width: $bp-medium) {
+      grid-row: 2;
+      grid-column: 1 / 3;
+    }
   }
   &_2 {
     grid-row: 2;
     grid-column: col-start 2 / col-end 2;
+    @media (max-width: $bp-medium) {
+      grid-row: 3;
+      grid-column: 1 / 3;
+    }
   }
   &_3 {
     grid-row: 3;
     grid-column: col-start 1 / col-end 1;
+    @media (max-width: $bp-medium) {
+      grid-row: 4;
+      grid-column: 1 / 3;
+    }
   }
   &_4 {
-    grid-row: 3; // ← fix this, was 4 before
+    grid-row: 3;
     grid-column: col-start 2 / col-end 2;
+    @media (max-width: $bp-medium) {
+      grid-row: 5;
+      grid-column: 1 / 3;
+    }
   }
 }
 
@@ -230,18 +251,34 @@
   &_1 {
     grid-row: 5;
     grid-column: col-start 1 / col-end 2;
+    @media (max-width: $bp-medium) {
+      grid-row: 7;
+      grid-column: 1 / 3;
+    }
   }
   &_2 {
     grid-row: 6;
     grid-column: col-start 1 / col-end 2;
+    @media (max-width: $bp-medium) {
+      grid-row: 8;
+      grid-column: 1 / 3;
+    }
   }
   &_3 {
     grid-row: 7;
     grid-column: col-start 1 / col-end 2;
+    @media (max-width: $bp-medium) {
+      grid-row: 9;
+      grid-column: 1 / 3;
+    }
   }
   &_4 {
     grid-row: 8;
     grid-column: col-start 1 / col-end 2;
+    @media (max-width: $bp-medium) {
+      grid-row: 10;
+      grid-column: 1 / 3;
+    }
   }
 }
 
