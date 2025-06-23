@@ -12,6 +12,7 @@ import Contact from "@/components/Contact";
 import Showcase from "@/components/Showcase";
 import SkillsAndTools from "@/components/SkillsAndTools";
 import MobileMenu from "@/components/MobileMenu";
+import home from "@/styles/components/home.module.scss";
 
 import { AnimatePresence } from "motion/react";
 
