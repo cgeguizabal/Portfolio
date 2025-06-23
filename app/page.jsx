@@ -12,7 +12,6 @@ import Contact from "@/components/Contact";
 import Showcase from "@/components/Showcase";
 import SkillsAndTools from "@/components/SkillsAndTools";
 import MobileMenu from "@/components/MobileMenu";
-import home from "@/styles/components/home.module.scss";
 
 import { AnimatePresence } from "motion/react";
 
@@ -38,37 +37,35 @@ const HomePage = () => {
 
   return (
     <>
-      <div className={home.container}>
-        <PersonalCardProfile />
-        <FrontendMentorSection />
-        <AnimatePresence mode="wait">
-          {welcomingSection && <Welcoming key="welcoming" />}
-        </AnimatePresence>
-        <AnimatePresence mode="wait">
-          {welcomingSection && <LetsworkTogether key="welcoming" />}
-        </AnimatePresence>
-        <AnimatePresence mode="wait">
-          {welcomingSection && <SkillAndToolsSection key="welcoming" />}
-        </AnimatePresence>
-        <AnimatePresence mode="wait">
-          {welcomingSection && <PhraseSection key="welcoming" />}
-        </AnimatePresence>
-        <RightSideMenu />
-        <MobileMenu />
-        <LastSection />
-        <AnimatePresence mode="wait">
-          {aboutSection && <About key="about" />}
-        </AnimatePresence>
-        <AnimatePresence mode="wait">
-          {showCaseSection && <Showcase key="showcase" />}
-        </AnimatePresence>
-        <AnimatePresence mode="wait">
-          {contactSection && <Contact key="about" />}
-        </AnimatePresence>
-        <AnimatePresence mode="wait">
-          {skillsSection && <SkillsAndTools key="skills" />}
-        </AnimatePresence>
-      </div>
+      <PersonalCardProfile />
+      <FrontendMentorSection />
+      <AnimatePresence mode="wait">
+        {welcomingSection && <Welcoming key="welcoming" />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {welcomingSection && <LetsworkTogether key="welcoming" />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {welcomingSection && <SkillAndToolsSection key="welcoming" />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {welcomingSection && <PhraseSection key="welcoming" />}
+      </AnimatePresence>
+      <RightSideMenu />
+      <MobileMenu />
+      <LastSection />
+      <AnimatePresence mode="wait">
+        {aboutSection && <About key="about" />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {showCaseSection && <Showcase key="showcase" />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {contactSection && <Contact key="about" />}
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        {skillsSection && <SkillsAndTools key="skills" />}
+      </AnimatePresence>
     </>
   );
 };
