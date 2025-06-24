@@ -51,7 +51,7 @@ export default function Welcoming() {
           />
         </motion.div>
         {/* Tittle*/}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
@@ -63,7 +63,7 @@ export default function Welcoming() {
           <h3 className={`${welcoming.text} ${dosis.className}`}>
             Web Developer
           </h3>
-        </motion.div>
+        </motion.div> */}
       </div>
     </motion.div>
   );

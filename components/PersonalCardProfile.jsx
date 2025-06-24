@@ -8,6 +8,8 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 
+import { LuNewspaper } from "react-icons/lu";
+
 import { Dosis } from "next/font/google";
 
 const dosis = Dosis({
@@ -185,6 +187,26 @@ export default function PersonalCardProfile() {
           in <br />
           <b>El Salvador</b>
         </p>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 1.2,
+          y: { duration: 1.1, ease: "easeInOut" },
+          opacity: { duration: 2, ease: "easeOut" },
+        }}
+      >
+        <div className={personalCardProfile.resume}>
+          <a
+            href="ResumeGuillermoEguizabal.pdf"
+            download
+            className={`${personalCardProfile.resume_text} ${dosis.className}`}
+          >
+            Resume
+            <LuNewspaper />
+          </a>
+        </div>
       </motion.div>
     </motion.div>
   );
