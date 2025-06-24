@@ -100,21 +100,23 @@ function Lightbox({
                 </p>
               </div>
               <div className={lightbox.content_tags_col2}>
-                <p className={lightbox.content_tags_head}>
-                  <HiOutlineComputerDesktop
-                    className={lightbox.content_tags_head_icon}
-                  />
-                  Preview:{" "}
-                  <a
-                    href={preview}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={lightbox.content_tags_text_link}
-                  >
-                    {" "}
-                    Click here to see the live preview
-                  </a>
-                </p>
+                {preview ? (
+                  <p className={lightbox.content_tags_head}>
+                    <HiOutlineComputerDesktop
+                      className={lightbox.content_tags_head_icon}
+                    />
+                    Preview:{" "}
+                    <a
+                      href={preview}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={lightbox.content_tags_text_link}
+                    >
+                      {" "}
+                      Click here to see the live preview
+                    </a>
+                  </p>
+                ) : null}
                 <p className={lightbox.content_tags_head}>
                   <IoLogoGithub className={lightbox.content_tags_head_icon} />
                   Repository:{" "}

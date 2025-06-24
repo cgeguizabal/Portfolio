@@ -300,7 +300,6 @@ function Showcase() {
           title="RESTful API"
           project="Student Management API"
           tech="MySQL-Laravel Passport(OAuth2)"
-          preview="https://github.com/cgeguizabal/students_api"
           repository="https://github.com/cgeguizabal/students_api"
           features={[
             "User authentication with Laravel Passport.",
