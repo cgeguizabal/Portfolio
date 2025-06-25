@@ -199,7 +199,7 @@ export default function PersonalCardProfile() {
       >
         <div className={personalCardProfile.resume}>
           <a
-            href="ResumeGuillermoEguizabal.pdf"
+            href="Guillermo_Eguizabal_CV.pdf"
             download
             className={`${personalCardProfile.resume_text} ${dosis.className}`}
           >
