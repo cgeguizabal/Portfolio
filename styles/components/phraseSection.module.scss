@@ -59,11 +59,11 @@
     );
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25),
       inset 0 0 15px 2px rgba(255, 255, 255, 0.1);
-    .content {
-      &_word {
-        color: $soft-red;
-      }
-    }
+    // .content {
+    //   &_word {
+    //     color: $soft-red;
+    //   }
+    // }
   }
 }
 
@@ -99,7 +99,7 @@
   }
 
   &_icon {
-    color: $light-gray;
+    color: #404041e0;
     position: absolute;
     font-size: 8.2rem;
     top: 1rem;

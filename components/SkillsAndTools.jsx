@@ -23,6 +23,7 @@ import {
   SiAdobepremierepro,
   SiAdobexd,
   SiCanva,
+  SiGithub,
   SiPostman,
 } from "react-icons/si";
 import { RiNextjsLine, RiVercelLine, RiTailwindCssFill } from "react-icons/ri";
@@ -100,7 +101,7 @@ function SkillsAndTools() {
             }}
             className={skills.content_section}
           >
-            <h3>My Skill and Tools</h3>
+            <h3>My Skills and Tools</h3>
             <GoTools />
           </motion.div>
           <motion.div
@@ -303,7 +304,7 @@ function SkillsAndTools() {
             className={skills.content_techSkills}
           >
             <div className={skills.content_techSkills_title}>
-              <h3>My Technical Skill and Tools</h3>
+              <h3>My Tech Stack</h3>
               <SlWrench />
             </div>
             <motion.div
@@ -470,6 +471,9 @@ function SkillsAndTools() {
                 <li data-tooltip="Vercel">
                   <RiVercelLine />
                 </li>
+                <li data-tooltip="GitHub">
+                  <SiGithub />
+                </li>
               </ul>
             </motion.div>
             <motion.div
@@ -501,7 +505,8 @@ function SkillsAndTools() {
               </ul>
               <p className={skills.basis}>Basis Knowledge</p>
             </motion.div>
-            <motion.div
+
+            {/* <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{
@@ -531,7 +536,7 @@ function SkillsAndTools() {
                   <FaLaravel />
                 </li>
               </ul>
-            </motion.div>
+            </motion.div> */}
             <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -566,7 +571,8 @@ function SkillsAndTools() {
                 </li>
               </ul>
             </motion.div>
-            <motion.div
+            {/* DESGIGN STACK */}
+            {/* <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{
@@ -616,7 +622,7 @@ function SkillsAndTools() {
                   <SiCanva />
                 </li>
               </ul>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </motion.div>
       </motion.div>

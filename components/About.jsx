@@ -45,7 +45,7 @@ const About = () => {
           }}
           className={`${about.content_title} ${dosis.className}`}
         >
-          <h3>Resume</h3>
+          <h3>About me</h3>
         </motion.div>
 
         <motion.div
@@ -65,10 +65,10 @@ const About = () => {
           className={about.content_text_container}
         >
           <p className={`${about.content_text} ${dosis.className}`}>
-            Hello there, I’m a junior full-stack web developer with experience
-            in JavaScript, CSS, Next.js, vanilla JavaScript, React, and
-            Tailwind. I build dynamic, responsive applications using APIs and
-            Firestore, applying UX/UI design principles to create intuitive user
+            Hello there, I’m a full-stack web developer with experience in
+            JavaScript, CSS, Next.js, vanilla JavaScript, React, and Tailwind. I
+            build dynamic, responsive applications using APIs and Firestore,
+            applying UX/UI design principles to create intuitive user
             interfaces.
           </p>
           <p className={`${about.content_text} ${dosis.className}`}>

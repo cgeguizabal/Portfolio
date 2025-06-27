@@ -2,6 +2,7 @@
   border-radius: 2rem;
   grid-column: col-start 3 / col-end 4;
   grid-row: row-start 3 / row-end 3;
+  border: none;
 
   height: 20rem;
 
@@ -48,6 +49,7 @@
 
   /* Hover State  */
   &:hover {
+    cursor: pointer;
     background: linear-gradient(
       135deg,
       rgba(84, 84, 84, 0.1) 0%,

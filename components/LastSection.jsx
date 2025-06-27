@@ -15,7 +15,10 @@ function LastSection() {
   const containerDuration = 0;
   const containerDelay = 0;
   return (
-    <motion.div
+    <motion.a
+      href="https://github.com/cgeguizabal"
+      target="_blank"
+      rel="noopener noreferrer"
       className={lastSection.container}
       initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -89,7 +92,7 @@ function LastSection() {
           <h3>GitHub</h3>
         </motion.a>
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
 

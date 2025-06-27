@@ -43,6 +43,7 @@ import { FaAws } from "react-icons/fa";
 import { GiBearFace } from "react-icons/gi";
 import { BiLogoMongodb } from "react-icons/bi";
 
+import usebuttonStore from "@/store/buttonStore";
 const dosis = Dosis({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "800"],
@@ -50,8 +51,10 @@ const dosis = Dosis({
 });
 
 function SkillAndToolsSection() {
+  const { showSkills } = usebuttonStore();
+
   return (
-    <motion.div
+    <motion.button
       className={skillAndToolsSection.container}
       initial={{ opacity: 0, scale: 0.8, y: 75 }}
       exit={{ opacity: 0, y: 100, transition: { duration: 1 } }}
@@ -65,6 +68,7 @@ function SkillAndToolsSection() {
         x: { duration: 0.5, ease: "easeInOut" },
         opacity: { duration: 1.3, ease: "easeOut" },
       }}
+      onClick={showSkills}
     >
       <div className={skillAndToolsSection.content}>
         <motion.div
@@ -186,7 +190,7 @@ function SkillAndToolsSection() {
             <li>
               <FaFigma />
             </li>
-            <li>
+            {/* <li>
               <SiAdobeaftereffects />
             </li>
             <li>
@@ -212,7 +216,7 @@ function SkillAndToolsSection() {
             </li>
             <li>
               <SiCanva />
-            </li>
+            </li> */}
             <li>
               <FaHtml5 />
             </li>
@@ -303,7 +307,7 @@ function SkillAndToolsSection() {
             <li>
               <FaFigma />
             </li>
-            <li>
+            {/* <li>
               <SiAdobeaftereffects />
             </li>
             <li>
@@ -329,11 +333,11 @@ function SkillAndToolsSection() {
             </li>
             <li>
               <SiCanva />
-            </li>
+            </li> */}
           </ul>
         </motion.div>
       </div>
-    </motion.div>
+    </motion.button>
   );
 }
 

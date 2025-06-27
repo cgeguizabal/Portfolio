@@ -63,6 +63,7 @@ export default function PersonalCardProfile() {
           opacity: { duration: 2, ease: "easeOut" },
         }}
       >
+        {/* Profile picture */}
         <Image
           src="/images/photo-2.png"
           alt="Profile Picture"
@@ -71,19 +72,20 @@ export default function PersonalCardProfile() {
           className={personalCardProfile.image_profile}
           priority
         />
+        {/* circle */}
         <motion.img
           className={personalCardProfile.image_circle}
           src="/images/element-circle.png"
           alt="Rotating image"
-          initial={{ rotate: 0 }}
-          animate={{ rotate: 360 }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "linear",
-            repeatType: "loop",
-          }}
-          key="rotating-circle" // Important for HMR
+          // initial={{ rotate: 0 }}
+          // animate={{ rotate: 360 }}
+          // transition={{
+          //   duration: 10,
+          //   repeat: Infinity,
+          //   ease: "linear",
+          //   repeatType: "loop",
+          // }}
+          // key="rotating-circle" // Important for HMR
         />
       </motion.div>
 

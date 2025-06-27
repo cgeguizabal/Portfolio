@@ -86,7 +86,7 @@ function RightSideMenu() {
 
           <span className={rightSideMenu.content_text}>ABOUT</span>
         </motion.button>
-        {/*SHOWCASE*/}
+        {/*Projects*/}
         <motion.button
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
@@ -104,7 +104,7 @@ function RightSideMenu() {
         >
           <PiSuitcase className={rightSideMenu.content_icon} />
 
-          <span className={rightSideMenu.content_text}>SHOWCASE</span>
+          <span className={rightSideMenu.content_text}>PROJECTS</span>
         </motion.button>
         {/* SKILLS */}
         <motion.button

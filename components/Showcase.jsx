@@ -65,7 +65,7 @@ function Showcase() {
             }}
             className={`${showcase.content_title} ${dosis.className}`}
           >
-            <h3>PORTFOLIO</h3>
+            <h3>My latest projects</h3>
             <PiCompassRoseThin className={showcase.content_title_icon} />
           </motion.div>
           <motion.div

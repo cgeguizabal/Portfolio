@@ -16,7 +16,10 @@ function FrontendMentorSection() {
   const containerDelay = 0;
 
   return (
-    <motion.div
+    <motion.a
+      href="https://www.frontendmentor.io/profile/cgeguizabal"
+      target="_blank"
+      rel="noopener noreferrer"
       className={frontEndMentor.container}
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
@@ -88,7 +91,7 @@ function FrontendMentorSection() {
           <h3>FrontEndMentor</h3>
         </motion.a>
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
 
