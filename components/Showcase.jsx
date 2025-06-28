@@ -211,10 +211,11 @@ While I was not involved in the styling or UI design, I focused entirely on the 
           img="images/lightPropertpulse.png"
         >
           Property Pulse is a modern full-stack web application for renting
-          properties. Built with Next.js, React, and Tailwind CSS, it offers a
-          responsive, feature-rich experience for users to browse, add, and
-          manage properties. It supports secure authentication via Google,
-          real-time messaging, and profile-based property interactions.
+          properties. Built with Next.js, React, Tailwind CSS and using MongoDB
+          as dataBase, it offers a responsive, feature-rich experience for users
+          to browse, add, and manage properties. It supports secure
+          authentication via Google, real-time messaging, and profile-based
+          property interactions.
         </Lightbox>
       )}
       {loopStudio && (
