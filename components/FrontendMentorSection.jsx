@@ -74,7 +74,7 @@ function FrontendMentorSection() {
           </motion.span>
         </div>
 
-        <motion.a
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -83,13 +83,10 @@ function FrontendMentorSection() {
             y: { duration: 1, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
-          href="https://www.frontendmentor.io/profile/cgeguizabal"
-          target="_blank"
-          rel="noopener noreferrer"
           className={frontEndMentor.button}
         >
           <h3>FrontEndMentor</h3>
-        </motion.a>
+        </motion.div>
       </div>
     </motion.a>
   );

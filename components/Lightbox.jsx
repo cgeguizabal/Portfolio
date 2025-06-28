@@ -22,7 +22,7 @@ function Lightbox({
   repository,
   features,
   img,
-
+  participation,
   children,
 }) {
   const close = useShowCaseStore((state) => state.closeAll);
@@ -150,6 +150,7 @@ function Lightbox({
               className={lightbox.content_paragraph}
             >
               <p>{children}</p>
+              <p>{participation}</p>
               <p className={lightbox.content_paragraph_features}>Features</p>
               <ul className={lightbox.content_paragraph_list}>
                 {features.map((item, index) => (

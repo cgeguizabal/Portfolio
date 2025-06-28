@@ -12,7 +12,7 @@ const dosis = Dosis({
 });
 
 function LetsworkTogether() {
-  const { showShowCase } = usebuttonStore();
+  const { showContact } = usebuttonStore();
   return (
     <motion.button
       className={letsworkTogether.container}
@@ -28,7 +28,7 @@ function LetsworkTogether() {
         x: { duration: 0.5, ease: "easeInOut" },
         opacity: { duration: 1.3, ease: "easeOut" },
       }}
-      onClick={showShowCase}
+      onClick={showContact}
     >
       <div className={letsworkTogether.content}>
         <div className={`${letsworkTogether.content_text} ${dosis.className}`}>

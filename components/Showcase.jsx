@@ -193,6 +193,8 @@ function Showcase() {
           tech="Next.js-Tailwind-NextAuth.js-MongoDB..."
           preview="https://property-pulse-omega-wheat.vercel.app/"
           repository="https://github.com/cgeguizabal/PropertyPulse"
+          participation="This project was developed as part of a course, allowing me to learn and apply new techniques and technologies in a real-world scenario.
+While I was not involved in the styling or UI design, I focused entirely on the full-stack development aspects of the project."
           features={[
             "User Authentication via Google using NextAuth.",
             "Create / Update / Delete Properties.",
@@ -222,6 +224,11 @@ function Showcase() {
           tech="React-Tailwind CSS"
           preview="https://loop-studios-cgeo.vercel.app/"
           repository="https://github.com/cgeguizabal/LoopStudios"
+          participation="I followed a mobile-first development process,
+          which is the most common and effective approach when working with
+          Tailwind CSS. Since the design requirements were clearly defined
+          for both mobile and desktop views, I was able to strategically apply
+          Tailwind’s utility classes to ensure a seamless mobile-first workflow."
           features={[
             "Responsive grid gallery displaying creative projects.",
 
@@ -231,7 +238,7 @@ function Showcase() {
           img="images/lightLoopstudios.png"
         >
           This project is a responsive website replicating the Loopstudios
-          landing page challenge from Frontend Mentor.
+          landing page challenge from Frontend Mentor challenge.
         </Lightbox>
       )}
       {clipBoard && (
@@ -241,6 +248,11 @@ function Showcase() {
           tech="React-Tailwind CSS"
           preview="https://celebrated-raindrop-e3a486.netlify.app/"
           repository="https://github.com/cgeguizabal/Clipboard"
+          participation="I followed a mobile-first development process,
+          which is the most common and effective approach when working with
+          Tailwind CSS. Since the design requirements were clearly defined
+          for both mobile and desktop views, I was able to strategically apply
+          Tailwind’s utility classes to ensure a seamless mobile-first workflow."
           features={[
             "Mobile first design.",
 
@@ -268,9 +280,10 @@ function Showcase() {
           ]}
           img="images/lightCartlist.png"
         >
-          A responsive product listing interface built with React, Sass, and
-          Zustand for global state management. The layout is structured using a
-          custom 11-column CSS grid.
+          This project is a responsive website built as a solution for a
+          Frontend Mentor challenge. A responsive product listing interface
+          built with React, Sass, and Zustand for global state management. The
+          layout is structured using a custom 11-column CSS grid.
         </Lightbox>
       )}
       {medcare && (
@@ -328,8 +341,10 @@ function Showcase() {
           ]}
           img="images/lightSpotify.png"
         >
-          React web application that applies props fundamentals and user form
-          verification to deliver dynamic and responsive user interfaces.
+          This is a personal project that I created to practice concepts used in
+          React. A Web application that applies props fundamentals and user form
+          verification to deliver dynamic and responsive user
+          interfaces.interfaces.
         </Lightbox>
       )}
       {sciQuest && (
@@ -339,6 +354,11 @@ function Showcase() {
           tech="React-CSS-Axios"
           preview="https://keen-biscochitos-c139f8.netlify.app/"
           repository="https://github.com/cgeguizabal/SciQuest"
+          participation=" *View a list of scientists with basic information (name, email,
+            username). 
+            *Click a button to view each scientist’s publications.  
+            This project is ideal for practicing API consumption, managing
+          state in React, and building responsive user interfaces."
           features={[
             "Scientists List: Displays a table with scientists’ basic information.",
             "Responsive Design: Mobile-friendly and adapts to small screens.",
@@ -346,18 +366,11 @@ function Showcase() {
           ]}
           img="images/lightSciQuest.png"
         >
-          This project is a web page built using Vite + React, leveraging the
-          Axios library to consume a public API. The platform is designed for
-          scientists, allowing them to view information about other scientists
-          and explore their publications. When visiting the page, users can:{" "}
-          <br />
-          <span>
-            *View a list of scientists with basic information (name, email,
-            username).
-          </span>
-          <span>*Click a button to view each scientist’s publications. </span>{" "}
-          <br /> This project is ideal for practicing API consumption, managing
-          state in React, and building responsive user interfaces.
+          This personal project is a web page built using Vite + React,
+          leveraging the Axios library to consume a public API. The platform is
+          designed for scientists, allowing them to view information about other
+          scientists and explore their publications. When visiting the page,
+          users can:
         </Lightbox>
       )}
     </>

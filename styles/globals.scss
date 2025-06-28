@@ -13,6 +13,15 @@ html {
     font-size: 50%;
     height: -webkit-fill-available; //test
   }
+  @media (max-width: 85em) {
+    //1260px ÷ 16px = 78.75em
+    font-size: 55%;
+    height: -webkit-fill-available; //test
+  }
+  @media (max-width: 75em) {
+    font-size: 50%;
+    height: -webkit-fill-available; //test
+  }
 }
 
 body {

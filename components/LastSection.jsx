@@ -75,7 +75,7 @@ function LastSection() {
           </motion.span>
         </div>
 
-        <motion.a
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -84,13 +84,10 @@ function LastSection() {
             y: { duration: 1, ease: "easeInOut" },
             opacity: { duration: 2, ease: "easeOut" },
           }}
-          href="https://github.com/cgeguizabal"
-          target="_blank"
-          rel="noopener noreferrer"
           className={lastSection.button}
         >
           <h3>GitHub</h3>
-        </motion.a>
+        </motion.div>
       </div>
     </motion.a>
   );
