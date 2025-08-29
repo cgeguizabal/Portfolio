@@ -9,6 +9,7 @@ const useShowCaseStore = create((set) => ({
   restFulApi: false,
   spotify: false,
   sciQuest: false,
+  timelessPages: false,
 
   showPropertyPulse: () => set((state) => ({ propertyPulse: true })),
   showLoopStudio: () => set((state) => ({ loopStudio: true })),
@@ -18,6 +19,7 @@ const useShowCaseStore = create((set) => ({
   showRestFulApi: () => set((state) => ({ restFulApi: true })),
   showSpotify: () => set((state) => ({ spotify: true })),
   showSciQuest: () => set((state) => ({ sciQuest: true })),
+  showTimelessPages: () => set((state) => ({ timelessPages: true })),
   closeAll: () =>
     set((state) => ({
       propertyPulse: false,
@@ -28,6 +30,7 @@ const useShowCaseStore = create((set) => ({
       restFulApi: false,
       spotify: false,
       sciQuest: false,
+      timelessPages: false,
     })),
 }));
 

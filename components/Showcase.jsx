@@ -22,6 +22,7 @@ function Showcase() {
     restFulApi,
     spotify,
     sciQuest,
+    timelessPages,
     showPropertyPulse,
     showLoopStudio,
     showClipBoard,
@@ -30,6 +31,7 @@ function Showcase() {
     showRestFulApi,
     showSpotify,
     showSciQuest,
+    showTimelessPages,
   } = useShowCaseStore();
   return (
     <>
@@ -153,6 +155,13 @@ function Showcase() {
               }}
               className={showcase.content_main_2}
             >
+              {/* Timeless Pages */}
+              <ProjectCard
+                img="images/timelessPages.png"
+                type="Full-Stack web application"
+                title="Timeless Pages"
+                onClick={showTimelessPages}
+              />
               {/* LOOPSTUDIO */}
               <ProjectCard
                 img="images/loopStudio.png"
@@ -216,6 +225,39 @@ While I was not involved in the styling or UI design, I focused entirely on the 
           to browse, add, and manage properties. It supports secure
           authentication via Google, real-time messaging, and profile-based
           property interactions.
+        </Lightbox>
+      )}
+      {timelessPages && (
+        <Lightbox
+          title="Timeless Pages"
+          project="Full-Stack web application for library inventory"
+          tech="React, SCSS, MySQL and Laravel"
+          preview="https://timeless-pages-product-inventory-gk.vercel.app/register"
+          repository="https://github.com/cgeguizabal/TimelessPages-Product-Inventory"
+          participation="The system supports role-based access (Admin and Seller), complete CRUD operations for products, purchases, suppliers, and customers, and generates filterable reports for stock and sales, offering both robust functionality and a modern tech stack. Inside the repository you will find admin user's credentials so you can test it for yourself"
+          features={[
+            "🔑 User authentication through Bearer Token",
+            "📝 User registration",
+            "🔓 Login and logout",
+            "👥 Full CRUD for Users with exclusive permissions for administrators",
+            "📦 CRUD for Products with permissions for sellers and administrators, with limitations for sellers",
+            "🏢 CRUD for Suppliers, limited permissions for sellers",
+            "👤 CRUD for Clients",
+            "🛒 Purchase registration",
+            "💰 Sales registration and sales data retrieval",
+            "🔓 Permission settings through middleware and policies",
+            "🔓 Data validation with FormRequest",
+            "📊 Stock reports",
+            "📅 Sales report filtered by dates",
+            "🧾 Purchase report filtered by suppliers",
+          ]}
+          img="images/lightTimelessPages.png"
+        >
+          TimelessPages is a full-stack bookstore inventory management system I
+          developed using Laravel, Laravel Sanctum, MySQL, React, Vite, Zustand,
+          and SASS. The backend provides secure APIs for authentication, product
+          and sales management, while the frontend delivers a responsive and
+          intuitive interface with dashboards, forms, and tables.
         </Lightbox>
       )}
       {loopStudio && (
