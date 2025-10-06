@@ -134,30 +134,32 @@ const About = () => {
 
           {/* Education Boxes */}
           <EducationBox
+            date="September 2025 - Present"
+            degree="Master’s Degree in
+Software Engineering "
+            place="Tech University
+"
+            className={about.education_box_1}
+          />
+
+          <EducationBox
             date="October 2024 - May 2025"
             degree="Bootcamp Full-Stack Jr"
             place="Kodigo Academy"
-            className={about.education_box_1}
+            className={about.education_box_2}
           />
 
           <EducationBox
             date="2018–2020"
             degree="Bachelor's Degree in Graphic Design"
             place="Don Bosco University"
-            className={about.education_box_2}
+            className={about.education_box_3}
           />
 
           <EducationBox
             date="2017–2018"
             degree="Technical Degree in Graphic Design"
             place="Don Bosco University"
-            className={about.education_box_3}
-          />
-
-          <EducationBox
-            date="2014–2016"
-            degree="Technical High School Diploma"
-            place="Ricaldone Technical Institute"
             className={about.education_box_4}
           />
 
