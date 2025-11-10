@@ -117,6 +117,7 @@ function Lightbox({
                     </a>
                   </p>
                 ) : null}
+                {/* Repository */}
                 <p className={lightbox.content_tags_head}>
                   <IoLogoGithub className={lightbox.content_tags_head_icon} />
                   Repository:{" "}

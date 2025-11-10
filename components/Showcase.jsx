@@ -23,6 +23,7 @@ function Showcase() {
     spotify,
     sciQuest,
     timelessPages,
+    ejg,
     showPropertyPulse,
     showLoopStudio,
     showClipBoard,
@@ -32,6 +33,7 @@ function Showcase() {
     showSpotify,
     showSciQuest,
     showTimelessPages,
+    showEjg,
   } = useShowCaseStore();
   return (
     <>
@@ -110,6 +112,13 @@ function Showcase() {
               }}
               className={showcase.content_main_1}
             >
+              {/* Property Pulse */}
+              <ProjectCard
+                img="images/EJG.png"
+                type="Full-Stack web application"
+                title="Expenditions George of the Jungle"
+                onClick={showEjg}
+              />
               {/* Property Pulse */}
               <ProjectCard
                 img="images/propertyPulse.png"
@@ -195,6 +204,34 @@ function Showcase() {
         </div>
       </motion.div>
 
+      {ejg && (
+        <Lightbox
+          title="Expeditions George of the Jungle"
+          project="Tour Packages booking website"
+          tech="React.js-Sass-Node.js-MongoDB..."
+          preview="https://egj-front-end.vercel.app/"
+          repository="https://github.com/cgeguizabal/egjBackEnd"
+          participation="The entire project — including UX, UI, backend, and frontend — has been designed and developed by me, following best practices across all disciplines to deliver a high-quality final product.
+
+The backend is built with Node.js and MongoDB, while the frontend is developed with React.js. I also implemented Clerk for user authentication and management across both the frontend and backend, and integrated Stripe to handle secure online payments via credit and debit cards."
+          features={[
+            "User Authentication: Secure sign-in with Google using Clerk for user management",
+            "Full API Integration: Complete backend API for managing users and tour packages.",
+            "Payment Processing: Seamless payment methods integrated with Stripe for secure transactions.",
+            "Cloud Storage: Cloudinary used for storing and managing videos and images.",
+            "Notification System: Real-time notifications for bookings and user updates.",
+            "Admin Dashboard: Dedicated admin panel for managing tours, users, and payments efficiently.",
+          ]}
+          img="images/lightEgj.png"
+        >
+          Expeditions George of the Jungle is a tour agency based in Leticia,
+          Amazonas, Colombia. This project is currently in development and aims
+          to provide tourists with an easier way to access the EGJ website,
+          where they can browse and book tour packages using different payment
+          methods. FrontEnd Repository:
+          https://github.com/cgeguizabal/egjFrontEnd.
+        </Lightbox>
+      )}
       {propertyPulse && (
         <Lightbox
           title="Property Pulse"

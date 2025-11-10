@@ -10,6 +10,7 @@ const useShowCaseStore = create((set) => ({
   spotify: false,
   sciQuest: false,
   timelessPages: false,
+  ejg: false,
 
   showPropertyPulse: () => set((state) => ({ propertyPulse: true })),
   showLoopStudio: () => set((state) => ({ loopStudio: true })),
@@ -20,6 +21,7 @@ const useShowCaseStore = create((set) => ({
   showSpotify: () => set((state) => ({ spotify: true })),
   showSciQuest: () => set((state) => ({ sciQuest: true })),
   showTimelessPages: () => set((state) => ({ timelessPages: true })),
+  showEjg: () => set((state) => ({ ejg: true })),
   closeAll: () =>
     set((state) => ({
       propertyPulse: false,
@@ -31,6 +33,7 @@ const useShowCaseStore = create((set) => ({
       spotify: false,
       sciQuest: false,
       timelessPages: false,
+      ejg: false,
     })),
 }));
 
