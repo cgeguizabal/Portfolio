@@ -185,8 +185,8 @@ export default function PersonalCardProfile() {
         className={`${personalCardProfile.location} ${dosis.className}`}
       >
         <p className={personalCardProfile.location_country}>
-          Web Developer & Graphic Designer skilled in Frontend & Backend, based
-          in <br />
+          Software Developer & Graphic Designer skilled in Frontend & Backend,
+          based in <br />
           <b>El Salvador</b>
         </p>
       </motion.div>
