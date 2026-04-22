@@ -4,6 +4,9 @@ import { motion } from "motion/react";
 import { LiaScrewdriverSolid } from "react-icons/lia";
 import { SlWrench } from "react-icons/sl";
 import { AiOutlineHtml5 } from "react-icons/ai";
+import { TbBrandCSharp } from "react-icons/tb";
+import { DiMsqlServer } from "react-icons/di";
+import { SiDotnet } from "react-icons/si";
 
 import { GrJs, GrMysql } from "react-icons/gr";
 import { SiMongoose } from "react-icons/si";
@@ -345,6 +348,9 @@ function SkillsAndTools() {
                 <li data-tooltip="TypeScript">
                   <TbBrandTypescript />
                 </li>
+                <li data-tooltip="C#">
+                  <TbBrandCSharp />
+                </li>
                 <li data-tooltip="PHP">
                   <FaPhp />
                 </li>
@@ -376,6 +382,9 @@ function SkillsAndTools() {
                 </li>
                 <li data-tooltip="MongoDB">
                   <BiLogoMongodb />
+                </li>
+                <li data-tooltip="SQL Server">
+                  <DiMsqlServer />
                 </li>
               </ul>
             </motion.div>
@@ -410,6 +419,9 @@ function SkillsAndTools() {
                 </li>
                 <li data-tooltip="Laravel">
                   <FaLaravel />
+                </li>
+                <li data-tooltip=".NET">
+                  <SiDotnet />
                 </li>
                 <li data-tooltip="Bootstrap">
                   <FaBootstrap />
