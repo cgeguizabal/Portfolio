@@ -165,6 +165,24 @@ Software Engineering "
 
           <ExperienceBox
             className={about.experience_box_1}
+            place="Interguia Solutions"
+            position="Software Developer"
+            mode="El Salvador"
+            date="Nov 2025 – Present"
+            work="Developed desktop applications using C# and .NET in Visual Studio, while also providing support for creating SQL queries for stored procedures in SAP. Currently working on the development of an ERP project, and previously built a CRM dashboard web application connected to SQL Server."
+          />
+
+          <ExperienceBox
+            className={about.experience_box_2}
+            place="Expedition George of the Jungle"
+            position="Content Creator & Web Developer"
+            mode="Hybrid — Leticia, Amazonas, Colombia"
+            date="Jan 2022 – Present(Freelancer)"
+            work="Developed a serverless REST API with Node.js and MongoDB on Vercel to automate reservations and data management, implemented secure role-based user management with Clerk, and integrated Stripe payments, increasing immediate sales by 100%. Currently leading a UX/UI redesign with React and Sass to improve user experience and reduce reliance on website builders like WIX, while using Google Analytics to optimize performance. Also contributed to brand identity and multimedia asset creation using Adobe tools."
+          />
+
+          <ExperienceBox
+            className={about.experience_box_3}
             place="Kodigo"
             position="Full-Stack Jr"
             mode="Remote – El Salvador"
@@ -172,7 +190,7 @@ Software Engineering "
             work="Built a SPA with React and React Hook Form for efficient data handling. Developed a medical appointment interface with Firestore integration. Created reusable components with HTML, CSS, and JS via Frontend Mentor, and built a booking platform using API endpoints for a smooth user experience."
           />
           <ExperienceBox
-            className={about.experience_box_2}
+            className={about.experience_box_4}
             place="Amazonas EcoTravel"
             position="Web Developer"
             mode="Remote — Syracuse, United States"
@@ -181,22 +199,13 @@ Software Engineering "
 Managed site users and content efficiently, maintaining data security and structured access across the site."
           />
           <ExperienceBox
-            className={about.experience_box_3}
+            className={about.experience_box_5}
             place="Moda Week International(MWINTL)"
             position="Content Creator & Web Developer"
             mode="Remote — New York, United States"
             date="Jan 2022 – Dec 2024"
             work="Edited color palettes, photo compositions, and created corporate branding materials for fashion shows and events. Designed promotional assets and edited videos for social media and YouTube using Adobe Premiere and After Effects.
 Developed a complete website and visual assets using WIX and Adobe tools. Managed paid ad campaigns on Meta Business Suite to enhance reach and visibility."
-          />
-          <ExperienceBox
-            className={about.experience_box_4}
-            place="Expedition George of the Jungle"
-            position="Content Creator & Web Developer"
-            mode="Hybrid — Leticia, Amazonas, Colombia"
-            date="Jan 2022 – Jan 2025"
-            work="Redesigned brand identity, created merchandise, maps, and media from tourism activities in the Amazon using Adobe tools. Edited photos and videos, aligning visual content with the agency’s brand.
-Developed a full website using WIX and Adobe software, ran ad campaigns on Meta Business Suite, conducted market research in Spanish and English, monitored Google Analytics, supported ad strategies, and assisted as a translator for tourist activities."
           />
         </motion.div>
       </div>

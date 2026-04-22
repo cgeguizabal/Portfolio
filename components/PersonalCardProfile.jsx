@@ -35,7 +35,7 @@ export default function PersonalCardProfile() {
     e.preventDefault();
     window.open(
       `https://mail.google.com/mail/?view=cm&fs=1&to=${socialLinks.email}`,
-      "_blank"
+      "_blank",
     );
   };
 
@@ -121,7 +121,7 @@ export default function PersonalCardProfile() {
           <h3
             className={`${personalCardProfile.specialization_text} ${dosis.className}`}
           >
-            WEB DEVELOPER/ DESIGNER
+            SOFTWARE DEVELOPER
           </h3>
         </div>
       </motion.div>
